@@ -776,6 +776,21 @@
       .slide-arrow { width: 40px; height: 40px; }
       .slide-dot { width: 10px; height: 10px; }
     }
+
+    /* Target the element you want to hide the scrollbar for */
+.scrollable-element {
+    /* 1. Hide for Firefox */
+    scrollbar-width: none; 
+    
+    /* 2. Hide for Internet Explorer and legacy Edge */
+    -ms-overflow-style: none; 
+}
+
+/* 3. Hide for Chrome, Safari, Opera, and modern Edge */
+.scrollable-element::-webkit-scrollbar {
+    display: none;
+}
+
   </style>
 </head>
 <body>
