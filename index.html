@@ -219,8 +219,18 @@
       filter: brightness(0.45) saturate(0.7);
       transform: scale(1.05);
       transition: transform 6s ease;
+      overflow: hidden;
     }
     .slide.active .slide-bg { transform: scale(1); }
+    .slide-bg video {
+      position: absolute;
+      top: 50%; left: 50%;
+      min-width: 100%; min-height: 100%;
+      width: auto; height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      filter: brightness(0.45) saturate(0.7);
+    }
 
     .slide-overlay {
       position: absolute;
@@ -891,7 +901,7 @@
     </div>
 
    <div class="slide" data-index="3">
-      <div class="slide-bg" style="background-image: url('slideshow/Video.mp4')"></div>
+      <div class="slide-bg" style="background-image: url('slideshow/overhang.webp')"></div>
       <div class="slide-overlay"></div>
       <div class="slide-content">
         <div class="slide-text">
@@ -899,7 +909,7 @@
           <h1 class="slide-heading">People.<br><em>Community.</em><br>Opportunity.</h1>
           <p class="slide-body">We're still building, but our focus remains simple — creating a space where everyone belongs.</p>
           <div class="slide-btns">
-            <a href="https://cash.app/f/POOL?id=r69jwqzs" class="slide-btn primary">Get Involved</a>
+            <a href="donate.html" class="slide-btn primary">Get Involved</a>
           </div>
         </div>
       </div>
@@ -913,7 +923,7 @@
         <button class="slide-dot" data-slide="3" aria-label="Slide 4"></button>
       </div>
       <div style="display: flex; align-items: center; gap: 20px;">
-        <span class="slide-counter"><span class="current">01</span> / 03</span>
+        <span class="slide-counter"><span class="current">01</span> / 04</span>
         <div class="slide-arrows">
           <button class="slide-arrow" id="prevSlide" aria-label="Previous">&#8592;</button>
           <button class="slide-arrow" id="nextSlide" aria-label="Next">&#8594;</button>
@@ -1125,13 +1135,38 @@
     var current = 0;
     var autoplayTimer;
 
+    // Auto-detect videos: loads slideshow/slide-{index}.mp4 or known video files.
+    var knownVideos = { 0: 'slideshow/j1nqztw.mp4', 3: 'slideshow/j1nqztw.mp4' };
+    slides.forEach(function(slide, i) {
+      var bg = slide.querySelector('.slide-bg');
+      var vid = document.createElement('video');
+      vid.muted = true;
+      vid.loop = true;
+      vid.playsInline = true;
+      vid.preload = 'auto';
+      vid.src = 'slideshow/slide-' + i + '.mp4';
+      vid.addEventListener('error', function() {
+        if (knownVideos[i]) {
+          vid.src = knownVideos[i];
+        }
+      });
+      vid.addEventListener('loadeddata', function() {
+        bg.appendChild(vid);
+        if (slide.classList.contains('active')) vid.play().catch(function() {});
+      });
+    });
+
     function goToSlide(index) {
+      var outVideo = slides[current].querySelector('video');
+      if (outVideo) outVideo.pause();
       slides[current].classList.remove('active');
       dots[current].classList.remove('active');
       current = (index + slides.length) % slides.length;
       slides[current].classList.add('active');
       dots[current].classList.add('active');
       counter.textContent = current + 1 < 10 ? '0' + (current + 1) : '' + (current + 1);
+      var inVideo = slides[current].querySelector('video');
+      if (inVideo) inVideo.play().catch(function() {});
     }
 
     document.getElementById('nextSlide').addEventListener('click', function() {
