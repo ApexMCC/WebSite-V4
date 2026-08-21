@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate | Apex MCC</title>
+<link rel="icon" type="image/png" href="./cdn/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Nunito Sans', sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* navbar */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.09);
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #eaf1eb;
+}
+.navbar-logo { height: 36px; width: auto; object-fit: contain; }
+.navbar-left { display: flex; align-items: center; gap: 12px; }
+.navbar-right { display: flex; align-items: center; gap: 8px; }
+.navbar-link {
+  padding: 8px 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: color 0.15s, background 0.15s;
+}
+.navbar-link:hover, .navbar-link.active { color: #fff; background: rgba(255,255,255,0.06); }
+.navbar-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 20px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #06130a;
+  background: #3bc94e;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.06s;
+}
+.navbar-cta:hover { background: #33a33f; }
+.navbar-cta:active { transform: scale(0.97); }
+
+/* page hero */
+.donate-hero {
+  padding: 140px 80px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.donate-hero h1 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 16px;
+}
+.donate-hero h1 span { color: #3bc94e; }
+.donate-hero p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.6);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* donate card */
+.donate-card-wrap {
+  padding: 20px 80px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.donate-card {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 48px 40px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.donate-card:hover {
+  border-color: rgba(59,201,78,0.35);
+  background: rgba(255,255,255,0.05);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(59,201,78,0.1);
+}
+
+.donate-card-top {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.donate-card-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  background: rgba(59,201,78,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.donate-card-icon svg {
+  width: 36px;
+  height: 36px;
+  color: #3bc94e;
+}
+.donate-card-top h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+.donate-card-top p {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+}
+
+/* methods grid */
+.donate-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.method-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  transition: 0.2s;
+}
+.donate-card:hover .method-item {
+  border-color: rgba(59,201,78,0.15);
+}
+.method-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.method-info h4 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+.method-info p {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+}
+
+.donate-card-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: #3bc94e;
+  color: #000;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: 0.2s;
+}
+.donate-card:hover .donate-card-cta {
+  background: #45d958;
+  box-shadow: 0 6px 20px rgba(59,201,78,0.3);
+}
+.donate-card-cta svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* info section */
+.donate-info {
+  padding: 0 80px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.donate-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.info-card {
+  padding: 28px 24px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+}
+.info-card h3 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #3bc94e;
+}
+.info-card p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+}
+
+/* footer */
+.site-footer {
+  background: #000;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 80px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+}
+.site-footer a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.15s; }
+.site-footer a:hover { color: #fff; }
+
+/* responsive */
+@media (max-width: 1000px) {
+  .donate-hero, .donate-card-wrap, .donate-info { padding-left: 32px; padding-right: 32px; }
+  .donate-card { padding: 36px 28px; }
+  .donate-card-top { flex-direction: column; text-align: center; }
+  .donate-info-grid { grid-template-columns: 1fr; }
+  .site-footer { flex-direction: column; gap: 12px; text-align: center; padding: 20px 32px 28px; }
+}
+@media (max-width: 600px) {
+  .donate-hero, .donate-card-wrap, .donate-info { padding-left: 20px; padding-right: 20px; }
+  .donate-hero { padding-top: 120px; }
+  .donate-methods { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-left">
+    <a class="navbar-brand" href="index.html">
+      <img src="cdn/apex_long.png" alt="Apex MCC" class="navbar-logo" />
+    </a>
+  </div>
+  <div class="navbar-right">
+    <a class="navbar-link" href="index.html">Home</a>
+    <a class="navbar-cta" href="donate.html">Donate</a>
+  </div>
+</nav>
+
+<section class="donate-hero">
+  <h1>Support <span>Apex MCC</span></h1>
+  <p>Every contribution helps us build a space where diverse communities thrive. Choose a donation method that works for you.</p>
+</section>
+
+<div class="donate-card-wrap">
+  <!-- MAIN DONATE CARD — entire thing is a link -->
+  <a href="https://cash.app/f/POOL?id=r69jwqzs" target="_blank" class="donate-card">
+
+    <div class="donate-card-top">
+      <div class="donate-card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div>
+        <h2>Donate to Apex MCC</h2>
+        <p>Help us create Michigan's future multicultural community center.</p>
+      </div>
+    </div>
+
+    <div class="donate-methods">
+      <div class="method-item">
+        <div class="method-icon">💵</div>
+        <div class="method-info">
+          <h4>Cash App</h4>
+          <p>$ApexMCC</p>
+        </div>
+      </div>
+      <div class="method-item">
+        <div class="method-icon">🏦</div>
+        <div class="method-info">
+          <h4>Bank Transfer</h4>
+          <p>Direct deposit</p>
+        </div>
+      </div>
+      <div class="method-item">
+        <div class="method-icon">📱</div>
+        <div class="method-info">
+          <h4>Online</h4>
+          <p>Secure payment link</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="donate-card-cta">
+      Donate Now
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </div>
+
+  </a>
+</div>
+
+<div class="donate-info">
+  <div class="donate-info-grid">
+    <div class="info-card">
+      <h3>100% Goes to the Cause</h3>
+      <p>Every dollar donated goes directly toward building and operating the Apex MCC community center.</p>
+    </div>
+    <div class="info-card">
+      <h3>Tax Deductible</h3>
+      <p>Apex MCC is a registered nonprofit. Your donation may be tax deductible — check with your tax advisor.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span>&copy; 2026 Apex MCC. Michigan's Future Multicultural Community Center.</span>
+  <a href="index.html">Back to Home</a>
+</footer>
+
+</body>
+</html>
