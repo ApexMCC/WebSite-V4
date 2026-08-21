@@ -613,6 +613,133 @@
     }
     .footer-legal a { text-decoration: underline; }
 
+    /* linkedin */
+    .linkedin-section {
+      padding: 80px 80px;
+      background: rgba(255,255,255,0.02);
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .linkedin-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .linkedin-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .linkedin-header h2 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 1.6rem;
+      color: #fff;
+    }
+    .linkedin-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 28px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      margin-bottom: 20px;
+    }
+    .linkedin-card-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .linkedin-logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    .linkedin-info h3 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .linkedin-info p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.4;
+    }
+    .linkedin-meta {
+      font-size: 0.78rem !important;
+      color: rgba(255,255,255,0.3) !important;
+      margin-top: 2px;
+    }
+    .linkedin-follow-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: #0a66c2;
+      color: #fff;
+      border-radius: 20px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .linkedin-follow-btn:hover { background: #004182; }
+    .linkedin-posts {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .linkedin-post-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 20px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.2s;
+    }
+    .linkedin-post-card:hover {
+      border-color: rgba(10,102,194,0.3);
+      background: rgba(10,102,194,0.05);
+    }
+    .linkedin-post-icon {
+      width: 40px; height: 40px;
+      min-width: 40px;
+      border-radius: 10px;
+      background: rgba(10,102,194,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a66c2;
+    }
+    .linkedin-post-text {
+      flex: 1;
+    }
+    .linkedin-post-label {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .linkedin-post-text p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.5;
+    }
+    .linkedin-post-card svg:last-child {
+      color: rgba(255,255,255,0.2);
+      min-width: 18px;
+    }
+    .linkedin-post-card:hover svg:last-child { color: #0a66c2; }
+
     /* responsive */
     @media (max-width: 1000px) {
       .navbar { padding: 12px 16px; }
@@ -621,6 +748,9 @@
       .slideshow-controls { left: 32px; right: 32px; bottom: 32px; }
       .about-section, .pillars-section { padding: 60px 32px; }
       .pillars-grid { grid-template-columns: 1fr; }
+      .linkedin-section { padding: 60px 32px; }
+      .linkedin-card { flex-direction: column; gap: 16px; text-align: center; }
+      .linkedin-card-left { flex-direction: column; }
       .footer-main { grid-template-columns: 1fr; padding: 40px 32px; }
       .footer-social, .footer-bottom, .footer-legal { padding-left: 32px; padding-right: 32px; }
       .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
@@ -674,7 +804,7 @@
         <a href="https://cash.app/f/POOL?id=r69jwqzs" class="drawer-link" target="_blank">Donate</a>
         <a href="https://www.instagram.com/" class="drawer-link" target="_blank">Instagram</a>
         <a href="https://www.facebook.com/" class="drawer-link" target="_blank">Facebook</a>
-        <a href="https://x.com/" class="drawer-link" target="_blank">X (Twitter)</a>
+        <a href="https://x.com/ApexMCC" class="drawer-link" target="_blank">X (Twitter)</a>
         <a href="https://www.tiktok.com/" class="drawer-link" target="_blank">TikTok</a>
       </section>
     </div>
@@ -794,6 +924,51 @@
     </div>
   </section>
 
+  <section class="linkedin-section" id="linkedin">
+    <div class="linkedin-inner">
+      <div class="linkedin-header">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.766v5.84H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <h2>Follow us on LinkedIn</h2>
+      </div>
+      <div class="linkedin-card">
+        <div class="linkedin-card-left">
+          <img src="cdn/apex_long.png" alt="Apex MCC" class="linkedin-logo" />
+          <div class="linkedin-info">
+            <h3>Apex MCC</h3>
+            <p>Michigan's Future Multicultural Community Center</p>
+            <p class="linkedin-meta">Nonprofit Organization &middot; Michigan</p>
+          </div>
+        </div>
+        <a href="https://www.linkedin.com/company/apexmcc/" target="_blank" class="linkedin-follow-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.766v5.84H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Follow
+        </a>
+      </div>
+      <div class="linkedin-posts">
+        <a href="https://www.linkedin.com/company/apexmcc/posts/" target="_blank" class="linkedin-post-card">
+          <div class="linkedin-post-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          </div>
+          <div class="linkedin-post-text">
+            <span class="linkedin-post-label">Latest Updates</span>
+            <p>See our latest posts, announcements, and community stories on LinkedIn.</p>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/apexmcc/jobs/" target="_blank" class="linkedin-post-card">
+          <div class="linkedin-post-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          </div>
+          <div class="linkedin-post-text">
+            <span class="linkedin-post-label">Opportunities</span>
+            <p>Check for open positions, volunteer roles, and ways to get involved.</p>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
 
     <div class="footer-main">
@@ -833,7 +1008,7 @@
         <ul>
           <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
           <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-          <li><a href="https://x.com/" target="_blank">X (Twitter)</a></li>
+          <li><a href="https://x.com/ApexMCC" target="_blank">X (Twitter)</a></li>
           <li><a href="https://www.tiktok.com/" target="_blank">TikTok</a></li>
         </ul>
       </div>
@@ -841,10 +1016,21 @@
 
     <div class="footer-social">
       <div class="footer-social-icons">
-        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">&#9679;</a>
-        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">&#9679;</a>
-        <a href="https://x.com/" target="_blank" aria-label="X">&#9679;</a>
-        <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">&#9679;</a>
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://x.com/ApexMCC" target="_blank" aria-label="X">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
+          <svg width="14" height="16" viewBox="0 0 16 18" fill="currentColor"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/apexmcc/" target="_blank" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
       </div>
     </div>
 
