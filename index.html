@@ -613,6 +613,67 @@
     }
     .footer-legal a { text-decoration: underline; }
 
+    /* logo marquee */
+    .marquee-section {
+      padding: 48px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      overflow: hidden;
+      background: rgba(255,255,255,0.02);
+    }
+    .marquee-label {
+      text-align: center;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 28px;
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 30s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 48px;
+      flex-shrink: 0;
+      opacity: 0.4;
+      transition: opacity 0.3s;
+    }
+    .marquee-item:hover {
+      opacity: 0.8;
+    }
+    .marquee-item img {
+      height: 36px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(1) brightness(2);
+      transition: filter 0.3s;
+    }
+    .marquee-item:hover img {
+      filter: grayscale(0) brightness(1);
+    }
+    .marquee-item span {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #fff;
+      white-space: nowrap;
+    }
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
     /* linkedin */
     .linkedin-section {
       padding: 80px 80px;
@@ -892,6 +953,62 @@
         </a>
       </div>
 
+    </div>
+  </section>
+
+  <section class="marquee-section">
+    <p class="marquee-label">Trusted &amp; Supported By</p>
+    <div class="marquee-track">
+      <!-- Duplicate these items for a seamless loop -->
+      <div class="marquee-item">
+        <img src="cdn/image-11.webp" alt="OCEC">
+        
+      </div>
+      <div class="marquee-item">
+        <img src="cdn/image-11.webp" alt="OCEC">
+        
+      </div>
+      <div class="marquee-item">
+        <img src="cdn/image-11.webp" alt="OCEC">
+        
+      </div>
+      <div class="marquee-item">
+        <img src="cdn/image-11.webp" alt="OCEC">
+        
+      </div>
+      <div class="marquee-item">
+        <img src="cdn/image-11.webp" alt="OCEC">
+        
+      </div>
+      <div class="marquee-item">
+        <img src="cdn/image-11.webp" alt="OCEC">
+        
+      </div>
+      <!-- Second set for seamless loop -->
+      <div class="marquee-item">
+        <img src="cdn/image-11.webp" alt="OCEC">
+        
+      </div>
+      <div class="marquee-item">
+        <img src="cdn/image-11.webp" alt="OCEC">
+        
+      </div>
+      <div class="marquee-item">
+        <img src="cdn/image-11.webp" alt="OCEC">
+        
+      </div>
+      <div class="marquee-item">
+        <img src="cdn/image-11.webp" alt="OCEC">
+        
+      </div>
+      <div class="marquee-item">
+        <img src="cdn/image-11.webp" alt="OCEC">
+        
+      </div>
+      <div class="marquee-item">
+        <img src="cdn/image-11.webp" alt="OCEC">
+        
+      </div>
     </div>
   </section>
 
