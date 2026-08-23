@@ -94,14 +94,12 @@ html, body {
 .menu-pill {
   width: 20px; height: 4px;
   background: #eaf1eb;
-  border-radius: 2px;
   position: relative;
 }
 .menu-pill::before, .menu-pill::after {
   content: ''; position: absolute; left: 0;
   width: 14px; height: 4px;
   background: #eaf1eb;
-  border-radius: 2px;
 }
 .menu-pill::before { top: -7px; }
 .menu-pill::after  { bottom: -7px; }
