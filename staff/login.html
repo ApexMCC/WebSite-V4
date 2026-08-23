@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,52 +6,172 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Apex One — Staff Sign In</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#000;--card:#0d0d0d;--border:#29312b;--text:#eaf1eb;--muted:#8b988e;--accent:#3bc94e}
-body{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:24px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
-.top-logo{position:fixed;top:20px;left:24px}
-.top-logo img{width:160px}
-.card{width:min(460px,100%);margin:auto;padding:32px 0}
-.auth{border:1px solid var(--border);border-radius:12px;padding:38px;background:var(--card)}
-.auth-header{text-align:center;margin-bottom:30px}
-.auth-header p{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-.auth-header h1{font-size:27px;font-weight:600;margin-bottom:9px}
-.auth-header span{font-size:13px;line-height:1.5;color:var(--muted)}
-.auth-btn{width:100%;height:50px;display:flex;align-items:center;justify-content:center;gap:12px;border:1px solid var(--border);border-radius:8px;background:#111;color:var(--text);font-size:14px;font-weight:600;cursor:pointer;transition:.15s}
-.auth-btn:hover{background:#181818;border-color:#fff}
-.auth-btn:active{transform:scale(.99)}
-.auth-btn:disabled{opacity:.55;cursor:default}
-.provider-icon{width:20px;height:20px;display:flex;align-items:center;justify-content:center}
-.provider-icon svg{width:20px;height:20px}
-.message{min-height:18px;margin-top:16px;font-size:13px;text-align:center}
-.notice{margin-top:22px;padding-top:18px;border-top:1px solid var(--border);font-size:11px;line-height:1.6;text-align:center;color:var(--muted)}
-.footer{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;gap:18px;padding:14px 24px;border-top:1px solid var(--border);background:#000}
-.footer-logo img{width:44px;height:44px}
-.footer p{max-width:600px;font-size:10px;line-height:1.6;color:#737b75}
-.footer a{color:#ddd;text-decoration:none}
-.footer a:hover{text-decoration:underline}
-@media(max-width:600px){body{padding:18px}.top-logo{position:static;align-self:flex-start;margin-bottom:20px}.top-logo img{width:140px}.card{padding:20px 0}.auth{padding:30px 22px}.footer{position:static;margin-top:20px;align-items:flex-start}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+min-height:100vh;
+background:#000;
+color:#f4f7f4;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+display:flex;
+flex-direction:column
+}
+.top-logo{
+position:absolute;
+top:28px;
+left:32px
+}
+.top-logo img{width:150px;height:auto}
+main{
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:100px 24px
+}
+.auth{
+width:100%;
+max-width:400px;
+text-align:center
+}
+.auth-brand{
+width:48px;
+height:48px;
+margin:0 auto 30px
+}
+.auth-brand img{
+width:100%;
+height:100%;
+object-fit:contain
+}
+.eyebrow{
+font-size:11px;
+font-weight:700;
+letter-spacing:.16em;
+text-transform:uppercase;
+color:#3bc94e;
+margin-bottom:12px
+}
+h1{
+font-size:32px;
+font-weight:600;
+letter-spacing:-.025em;
+margin-bottom:12px
+}
+.subtitle{
+font-size:14px;
+line-height:1.6;
+color:#858e87;
+max-width:330px;
+margin:0 auto
+}
+.auth-area{
+margin-top:32px
+}
+.auth-btn{
+width:100%;
+height:52px;
+border:0;
+border-radius:7px;
+background:#f4f7f4;
+color:#080a08;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+font-size:14px;
+font-weight:600;
+cursor:pointer;
+transition:.15s
+}
+.auth-btn:hover{
+background:#dfe6e0;
+transform:translateY(-1px)
+}
+.auth-btn:active{transform:translateY(0)}
+.auth-btn:disabled{
+opacity:.55;
+cursor:default;
+transform:none
+}
+.provider-icon{
+width:20px;
+height:20px;
+display:flex
+}
+.provider-icon svg{
+width:20px;
+height:20px
+}
+.message{
+min-height:18px;
+margin-top:15px;
+font-size:12px;
+color:#f87171
+}
+.notice{
+margin-top:25px;
+font-size:11px;
+line-height:1.6;
+color:#555e57
+}
+.footer{
+padding:24px 32px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center
+}
+.footer p{
+font-size:10px;
+line-height:1.6;
+color:#555e57;
+max-width:650px
+}
+.footer a{
+color:#858e87;
+text-decoration:none
+}
+.footer a:hover{color:#f4f7f4}
+@media(max-width:600px){
+.top-logo{
+position:static;
+padding:25px 24px 0
+}
+.top-logo img{width:135px}
+main{padding:60px 24px}
+.auth{max-width:380px}
+h1{font-size:29px}
+.footer{padding:20px 24px}
+}
 </style>
 </head>
 <body>
 
 <header class="top-logo">
-<img src="assets/images/apex-long.webp" alt="Apex">
+<img src="assets/images/apex-long.webp" alt="Apex One">
 </header>
 
-<main class="card">
+<main>
 <section class="auth">
 
-<div class="auth-header">
-<p>Apex One</p>
-<h1>Staff Sign In</h1>
-<span>Sign in to access the Apex One staff portal.</span>
+<div class="auth-brand">
+<img src="assets/images/apex-logo.webp" alt="Apex">
 </div>
 
+<div class="eyebrow">Staff Portal</div>
+
+<h1>Welcome to Apex One</h1>
+
+<p class="subtitle">
+Sign in with your authorized organization account to continue.
+</p>
+
+<div class="auth-area">
+
 <!-- GOOGLE AUTH
-     Comment this section out to disable Google. -->
-<section>
-<button class="auth-btn" type="button" onclick="signIn('google')">
+     COMMENT THIS SECTION TO USE MICROSOFT -->
+<section id="googleAuth">
+<button class="auth-btn" onclick="signIn('google')">
 <span class="provider-icon">
 <svg viewBox="0 0 48 48">
 <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
@@ -65,19 +186,16 @@ Continue with Google
 
 
 <!-- MICROSOFT AUTH
-     To switch to Microsoft:
-     1. Comment out the Google section above.
-     2. Remove the comment markers around this section. -->
-
+     UNCOMMENT THIS AND COMMENT GOOGLE ABOVE -->
 <!--
-<section>
-<button class="auth-btn" type="button" onclick="signIn('microsoft')">
+<section id="microsoftAuth">
+<button class="auth-btn" onclick="signIn('microsoft')">
 <span class="provider-icon">
 <svg viewBox="0 0 24 24">
 <path fill="#f25022" d="M1 1h10.5v10.5H1z"/>
 <path fill="#7fba00" d="M12.5 1H23v10.5H12.5z"/>
 <path fill="#00a4ef" d="M1 12.5h10.5V23H1z"/>
-<path fill="#ffb900" d="M12.5 12.5H23V23h-10.5z"/>
+<path fill="#ffb900" d="M12.5 12.5H23V23H12.5z"/>
 </svg>
 </span>
 Continue with Microsoft
@@ -87,22 +205,19 @@ Continue with Microsoft
 
 <p id="message" class="message"></p>
 
+</div>
+
 <p class="notice">
-Access is restricted to authorized Apex One staff.
+Authorized Apex One staff only.
 </p>
 
 </section>
 </main>
 
 <footer class="footer">
-<span class="footer-logo">
-<img src="assets/images/apex-logo.webp" alt="Apex">
-</span>
 <p>
-Apex One is owned and distributed by Apex MCC and its subsidiaries.
-By signing in, you agree to the
-<a href="#">Terms of Use</a> and
-<a href="#">Privacy Policy</a>.
+© Apex MCC. Apex One Staff Portal.
+<a href="#">Privacy</a> · <a href="#">Terms</a>
 </p>
 </footer>
 
@@ -110,7 +225,7 @@ By signing in, you agree to the
 function signIn(provider){
 const b=event.currentTarget,m=document.getElementById("message"),old=b.innerHTML;
 b.disabled=true;
-b.innerHTML="Redirecting…";
+b.innerHTML="Signing in…";
 m.textContent="";
 if(provider==="google"){
 //window.location.href="/auth/google";
@@ -118,10 +233,8 @@ if(provider==="google"){
 if(provider==="microsoft"){
 //window.location.href="/auth/microsoft";
 }
-setTimeout(()=>{b.disabled=false;b.innerHTML=old},1500);
 }
 </script>
 
 </body>
 </html>
-
