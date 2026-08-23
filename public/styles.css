@@ -101,8 +101,6 @@ html, body {
   width: 14px; height: 4px;
   background: #eaf1eb;
 }
-.menu-pill::before { top: -7px; }
-.menu-pill::after  { bottom: -7px; }
 
 /* ============================================
    Drawer
