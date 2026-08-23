@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0; url=/public">
     <title>Page Redirect</title>
+    <script type="text/javascript">
+        // Only redirect if the current URL does not already contain '/public'
+        if (!window.location.pathname.includes('/public')) {
+            window.location.href = "/public";
+        }
+    </script>
 </head>
 <body>
     <p>If you are not redirected, <a href="/public">click here</a>.</p>
