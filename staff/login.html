@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apex One — Staff Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#080b09;
+--text:#f3f6f3;
+--muted:rgba(243,246,243,.58);
+--line:rgba(243,246,243,.18);
+--green:#3bc94e;
+--font:"Manrope",sans-serif;
+--serif:"Instrument Serif",Georgia,serif
+}
+html,body{min-height:100%;font-family:var(--font);background:var(--bg);color:var(--text)}
+body{min-height:100vh}
+
+.page{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(90deg,rgba(5,8,6,.72) 0%,rgba(5,8,6,.48) 48%,rgba(5,8,6,.68) 100%),
+linear-gradient(180deg,rgba(5,8,6,.28),rgba(5,8,6,.78)),
+url("https://images.unsplash.com/photo-1454165833767-027c8f2f1d3f?q=80&w=1920&auto=format&fit=crop") center/cover no-repeat
+}
+
+.page:after{
+content:"";
+position:absolute;
+inset:0;
+background:radial-gradient(700px 500px at 75% 50%,rgba(59,201,78,.08),transparent 70%);
+pointer-events:none
+}
+
+.brand{
+position:relative;
+z-index:2;
+padding:42px 52px;
+display:flex;
+align-items:center
+}
+
+.logo{
+width:32px;
+height:32px
+}
+
+.main{
+position:relative;
+z-index:2;
+flex:1;
+width:min(1120px,calc(100% - 104px));
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1px 360px;
+align-items:center;
+gap:72px
+}
+
+.copy{max-width:520px}
+
+.eyebrow{
+font-size:10px;
+font-weight:700;
+letter-spacing:.2em;
+text-transform:uppercase;
+color:rgba(243,246,243,.42);
+margin-bottom:18px
+}
+
+.headline{
+font-family:var(--serif);
+font-size:clamp(42px,5vw,64px);
+font-weight:400;
+line-height:1.05;
+letter-spacing:-.025em
+}
+
+.headline em{font-style:italic}
+
+.sub{
+margin-top:24px;
+max-width:440px;
+font-size:14px;
+line-height:1.75;
+color:var(--muted)
+}
+
+.divider{
+height:330px;
+background:var(--line)
+}
+
+.login{
+width:100%
+}
+
+.login-label{
+font-size:10px;
+font-weight:700;
+letter-spacing:.2em;
+text-transform:uppercase;
+color:rgba(243,246,243,.42)
+}
+
+.title{
+font-family:var(--serif);
+font-size:36px;
+font-weight:400;
+line-height:1.1;
+margin-top:14px;
+letter-spacing:-.015em
+}
+
+.title em{font-style:italic}
+
+.desc{
+font-size:13px;
+line-height:1.7;
+color:var(--muted);
+margin-top:13px;
+max-width:330px
+}
+
+.desc strong{
+color:var(--text);
+font-weight:600
+}
+
+.google{
+width:100%;
+height:50px;
+margin-top:28px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+background:rgba(255,255,255,.035);
+border:1px solid rgba(243,246,243,.28);
+border-radius:3px;
+color:var(--text);
+font:600 11px var(--font);
+letter-spacing:.13em;
+text-transform:uppercase;
+cursor:pointer;
+transition:.2s
+}
+
+.google:hover{
+background:rgba(255,255,255,.08);
+border-color:rgba(243,246,243,.5)
+}
+
+.google:active{transform:scale(.99)}
+.google:disabled{opacity:.55;cursor:default}
+
+.google svg{width:17px;height:17px}
+
+.help{
+display:block;
+margin-top:17px;
+padding:0;
+background:none;
+border:0;
+color:rgba(243,246,243,.4);
+font:500 12px var(--font);
+cursor:pointer;
+transition:.2s
+}
+
+.help:hover{color:rgba(243,246,243,.75)}
+
+.message{
+min-height:18px;
+margin-top:12px;
+font-size:12px
+}
+
+.message.error{color:#f87171}
+.message.success{color:var(--green)}
+
+.footer{
+position:relative;
+z-index:2;
+padding:28px 52px 32px;
+font-size:10px;
+font-weight:600;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:rgba(243,246,243,.3)
+}
+
+@media(max-width:850px){
+.page{
+overflow:auto;
+background:
+linear-gradient(180deg,rgba(5,8,6,.58),rgba(5,8,6,.88)),
+url("https://images.unsplash.com/photo-1454165833767-027c8f2f1d3f?q=80&w=1920&auto=format&fit=crop") center/cover no-repeat
+}
+
+.brand{padding:30px 24px}
+
+.main{
+width:auto;
+margin:0;
+padding:55px 24px;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+gap:45px
+}
+
+.copy{max-width:600px}
+.divider{display:none}
+.login{max-width:420px}
+.footer{padding:20px 24px 28px}
+}
+
+@media(max-width:480px){
+.headline{font-size:42px}
+.title{font-size:32px}
+.main{padding-top:35px}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<div class="brand">
+<svg class="logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 2L29 26H3L16 2Z" stroke="#f3f6f3" stroke-width="2.2" stroke-linejoin="round"/>
+<path d="M16 13L22.5 26H9.5L16 13Z" fill="#3bc94e"/>
+</svg>
+</div>
+
+<main class="main">
+
+<section class="copy">
+<div class="eyebrow">Apex One Staff Resources</div>
+<h1 class="headline">Everything the team needs, <em>in one place.</em></h1>
+<p class="sub">Behind the gate: schedules, documents and the resources that keep every Apex One team running.</p>
+</section>
+
+<div class="divider"></div>
+
+<section class="login">
+<div class="login-label">Staff Access</div>
+
+<h2 class="title">Sign in to the <em>portal.</em></h2>
+
+<p class="desc">
+Access is limited to verified <strong>@apexone.com</strong> Google accounts.
+</p>
+
+<button class="google" id="googleBtn" onclick="handleSignIn()">
+<svg viewBox="0 0 24 24">
+<path fill="#4285F4" d="M21.35 12.27c0-.72-.06-1.41-.18-2.07H12v3.92h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.24z"/>
+<path fill="#34A853" d="M12 21.75c2.63 0 4.84-.87 6.45-2.36l-3.14-2.45c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.3v2.53A9.74 9.74 0 0 0 12 21.75z"/>
+<path fill="#FBBC05" d="M6.54 13.83A5.86 5.86 0 0 1 6.23 12c0-.64.11-1.26.31-1.83V7.64H3.3A9.75 9.75 0 0 0 2.25 12c0 1.57.38 3.06 1.05 4.36l3.24-2.53z"/>
+<path fill="#EA4335" d="M12 6.14c1.43 0 2.72.49 3.73 1.46l2.8-2.8C16.84 3.16 14.63 2.25 12 2.25A9.74 9.74 0 0 0 3.3 7.64l3.24 2.53C7.31 7.86 9.46 6.14 12 6.14z"/>
+</svg>
+Sign in with Google
+</button>
+
+<div class="message" id="message"></div>
+
+<button class="help" onclick="contactAdmin()">Trouble signing in? Contact your Apex administrator.</button>
+</section>
+
+</main>
+
+<footer class="footer">Apex One Staff Resources</footer>
+
+</div>
+
+<script>
+function handleSignIn(){
+const b=document.getElementById("googleBtn"),m=document.getElementById("message");
+b.disabled=true;
+b.innerHTML="Redirecting to Google…";
+m.textContent="";
+setTimeout(()=>{
+b.disabled=false;
+b.innerHTML=`<svg viewBox="0 0 24 24"><path fill="#4285F4" d="M21.35 12.27c0-.72-.06-1.41-.18-2.07H12v3.92h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.24z"/><path fill="#34A853" d="M12 21.75c2.63 0 4.84-.87 6.45-2.36l-3.14-2.45c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.3v2.53A9.74 9.74 0 0 0 12 21.75z"/><path fill="#FBBC05" d="M6.54 13.83A5.86 5.86 0 0 1 6.23 12c0-.64.11-1.26.31-1.83V7.64H3.3A9.75 9.75 0 0 0 2.25 12c0 1.57.38 3.06 1.05 4.36l3.24-2.53z"/><path fill="#EA4335" d="M12 6.14c1.43 0 2.72.49 3.73 1.46l2.8-2.8C16.84 3.16 14.63 2.25 12 2.25A9.74 9.74 0 0 0 3.3 7.64l3.24 2.53C7.31 7.86 9.46 6.14 12 6.14z"/></svg>Sign in with Google`;
+},1600);
+}
+
+function contactAdmin(){
+window.location.href="mailto:admin@apexone.com?subject=Staff Portal Sign-In Help";
+}
+</script>
+
+</body>
+</html>
