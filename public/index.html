@@ -24,130 +24,150 @@
 
   <link rel="icon" type="image/png" href="./cdn/favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="navbar-left">
-      <button class="navbar-menu-btn" id="menuToggle" aria-label="Open menu">
-        <span class="menu-pill"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">
-        <img src="cdn/apex_long.png" alt="Apex MCC" class="navbar-logo" />
+  <nav class="site-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo" aria-label="Apex MCC home">
+        <img src="cdn/apex_long.png" alt="Apex MCC logo">
       </a>
-    </div>
-    <div class="navbar-right">
-      <div class="navbar-links">
-        <a href="#about" class="navbar-link active">About</a>
-        <a href="#pillars" class="navbar-link">Mission</a>
+      <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+      <label for="mobile-menu-toggle" class="mobile-menu-button" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="nav-links">
+        <a href="/">HOME</a>
+        <a href="/community">OUR COMMUNITY</a>
+        <a href="/funding">FUNDRAISING</a>
+        <a href="/roadmap">ROADMAP</a>
+        <a href="/hiring">JOIN THE TEAM</a>
+        <a href="donate.html" class="donate-button">
+          DONATE <span aria-hidden="true">→</span>
+        </a>
       </div>
-      <a class="navbar-cta" href="donate.html">Donate</a>
     </div>
   </nav>
 
-  <div class="drawer-overlay" id="drawerOverlay"></div>
-  <aside class="drawer" id="drawer">
-    <div class="drawer-header">
-      <img src="cdn/apex_long.png" alt="" class="drawer-logo" />
-      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
-    </div>
-    <div class="drawer-body">
-      <section class="drawer-section">
-        <h4 class="drawer-section-title">APEX MCC</h4>
-        <a href="#about" class="drawer-link">About</a>
-        <a href="#pillars" class="drawer-link">Mission</a>
-      </section>
-      <section class="drawer-section">
-        <h4 class="drawer-section-title">CONNECT</h4>
-        <a href="https://www.apexmcc.org/" class="drawer-link" target="_blank">Website</a>
-        <a href="https://cash.app/f/POOL?id=r69jwqzs" class="drawer-link" target="_blank">Donate</a>
-        <a href="https://www.instagram.com/" class="drawer-link" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com/" class="drawer-link" target="_blank">Facebook</a>
-        <a href="https://x.com/ApexMCC" class="drawer-link" target="_blank">X (Twitter)</a>
-        <a href="https://www.tiktok.com/" class="drawer-link" target="_blank">TikTok</a>
-      </section>
-    </div>
-    <div class="drawer-footer">
-      <a class="drawer-cta" href="donate.html">Donate Now</a>
-    </div>
-  </aside>
+  <section class="hero">
+    <div class="slideshow">
 
-  <section class="hero-slideshow" id="hero">
-
-    <div class="slide active" data-index="0">
-      <div class="slide-bg" style="background-image: url('slideshow/5029919.webp')"></div>
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <div class="slide-text">
-          <div class="slide-label">Michigan's Future</div>
-          <h1 class="slide-heading">Building a<br><em>Multicultural</em><br>Future</h1>
-          <p class="slide-body">Support the Apex MCC cause. Every contribution helps us build a space for diverse communities to thrive and grow together.</p>
-          <div class="slide-btns">
-            <a href="donate.html" class="slide-btn primary">Donate Now</a>
-            <a href="#about" class="slide-btn outline">Learn More</a>
+      <!-- SLIDE 1 -->
+      <div class="slide active" data-index="0">
+        <div class="slide-bg" style="background-image: url('slideshow/5029919.webp')"></div>
+        <div class="slide-overlay"></div>
+        <div class="hero-glow"></div>
+        <div class="slide-content">
+          <div class="slide-1-layout">
+            <div>
+              <h1 class="slide-1-title">
+                BUILDING A<br>
+                HOME FOR<br>
+                <span class="highlight">EVERY</span><br>
+                COMMUNITY.
+              </h1>
+              <p class="slide-body">
+                Apex Multicultural Community Center is a nonprofit in development —
+                raising funds, finalizing plans, and hiring a founding team to build a
+                permanent home for 40+ cultural communities in our region.
+              </p>
+            </div>
+            <div class="funding-card">
+              <div class="funding-header">
+                <span class="funding-label">Raised so far</span>
+                <span class="funding-percent">4% OF GOAL</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill"></div>
+              </div>
+              <div class="funding-footer">
+                <span>$100,000 raised</span>
+                <span>$2.4M goal</span>
+              </div>
+              <div class="slide-btns">
+                <a href="donate.html" class="slide-btn primary">
+                  DONATE NOW <span aria-hidden="true">→</span>
+                </a>
+                <a href="/hiring" class="slide-btn outline">
+                  JOIN THE TEAM
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="slide" data-index="1">
-      <div class="slide-bg" style="background-image: url('slideshow/d4zf2td.jpg')"></div>
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <div class="slide-text">
-          <div class="slide-label">Community Center</div>
-          <h1 class="slide-heading">Where People<br><em>Connect</em><br>& Grow</h1>
-          <p class="slide-body">A place where diverse communities come together, access resources, and find real opportunities.</p>
-          <div class="slide-btns">
-            <a href="donate.html" class="slide-btn primary">Support Us</a>
-            <a href="#pillars" class="slide-btn outline">Our Mission</a>
+      <!-- SLIDE 2 -->
+      <div class="slide" data-index="1">
+        <div class="slide-bg" style="background-image: url('slideshow/d4zf2td.jpg')"></div>
+        <div class="slide-overlay"></div>
+        <div class="hero-glow"></div>
+        <div class="slide-content">
+          <div class="slide-text">
+            <div class="slide-label">Community Center</div>
+            <h1 class="slide-heading">Where People<br><em>Connect</em><br>&amp; Grow</h1>
+            <p class="slide-body">A place where diverse communities come together, access resources, and find real opportunities.</p>
+            <div class="slide-btns">
+              <a href="donate.html" class="slide-btn primary">Support Us</a>
+              <a href="#pillars" class="slide-btn outline">Our Mission</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
- <div class="slide" data-index="2">
-      <div class="slide-bg" style="background-image: url('slideshow/wjtt28t.jpeg')"></div>
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <div class="slide-text">
-          <div class="slide-label">Education &amp; Opportunity</div>
-          <h1 class="slide-heading">Empowering<br><em>Every</em><br>Individual</h1>
-          <p class="slide-body">Education, community support, resources, and a welcoming environment for all — that's our vision.</p>
-          <div class="slide-btns">
-            <a href="donate.html" class="slide-btn primary">Donate Now</a>
-            <a href="#about" class="slide-btn outline">About Us</a>
+      <!-- SLIDE 3 -->
+      <div class="slide" data-index="2">
+        <div class="slide-bg" style="background-image: url('slideshow/wjtt28t.jpeg')"></div>
+        <div class="slide-overlay"></div>
+        <div class="hero-glow"></div>
+        <div class="slide-content">
+          <div class="slide-text">
+            <div class="slide-label">Education &amp; Opportunity</div>
+            <h1 class="slide-heading">Empowering<br><em>Every</em><br>Individual</h1>
+            <p class="slide-body">Education, community support, resources, and a welcoming environment for all — that's our vision.</p>
+            <div class="slide-btns">
+              <a href="donate.html" class="slide-btn primary">Donate Now</a>
+              <a href="#about" class="slide-btn outline">About Us</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-   <div class="slide" data-index="3">
-      <div class="slide-bg" style="background-image: url('slideshow/overhang.webp')"></div>
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <div class="slide-text">
-          <div class="slide-label">Coming Soon</div>
-          <h1 class="slide-heading">People.<br><em>Community.</em><br>Opportunity.</h1>
-          <p class="slide-body">We're still building, but our focus remains simple — creating a space where everyone belongs.</p>
-          <div class="slide-btns">
-            <a href="donate.html" class="slide-btn primary">Get Involved</a>
+      <!-- SLIDE 4 -->
+      <div class="slide" data-index="3">
+        <div class="slide-bg" style="background-image: url('slideshow/overhang.webp')"></div>
+        <div class="slide-overlay"></div>
+        <div class="hero-glow"></div>
+        <div class="slide-content">
+          <div class="slide-text">
+            <div class="slide-label">Coming Soon</div>
+            <h1 class="slide-heading">People.<br><em>Community.</em><br>Opportunity.</h1>
+            <p class="slide-body">We're still building, but our focus remains simple — creating a space where everyone belongs.</p>
+            <div class="slide-btns">
+              <a href="donate.html" class="slide-btn primary">Get Involved</a>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
 
     <div class="slideshow-controls">
       <div class="slide-dots">
         <button class="slide-dot active" data-slide="0" aria-label="Slide 1"></button>
         <button class="slide-dot" data-slide="1" aria-label="Slide 2"></button>
-      <button class="slide-dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="slide-dot" data-slide="2" aria-label="Slide 3"></button>
         <button class="slide-dot" data-slide="3" aria-label="Slide 4"></button>
       </div>
-      <div style="display: flex; align-items: center; gap: 20px;">
-        <span class="slide-counter"><span class="current">01</span> / 04</span>
+      <div style="display: flex; align-items: center; gap: 20px">
+        <span class="slide-counter">
+          <span class="current">01</span> / 04
+        </span>
         <div class="slide-arrows">
           <button class="slide-arrow" id="prevSlide" aria-label="Previous">&#8592;</button>
           <button class="slide-arrow" id="nextSlide" aria-label="Next">&#8594;</button>
@@ -369,28 +389,6 @@
   </footer>
 
   <script>
-    // drawer
-    var menuToggle = document.getElementById('menuToggle');
-    var drawer = document.getElementById('drawer');
-    var overlay = document.getElementById('drawerOverlay');
-    var closeBtn = document.getElementById('drawerClose');
-
-    menuToggle.addEventListener('click', function() {
-      drawer.classList.add('open');
-      overlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-    function closeDrawer() {
-      drawer.classList.remove('open');
-      overlay.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    closeBtn.addEventListener('click', closeDrawer);
-    overlay.addEventListener('click', closeDrawer);
-    document.querySelectorAll('.drawer-link').forEach(function(l) {
-      l.addEventListener('click', closeDrawer);
-    });
-
     // slideshow
     var slides = document.querySelectorAll('.slide');
     var dots = document.querySelectorAll('.slide-dot');
@@ -462,7 +460,7 @@
     // active nav on scroll
     window.addEventListener('scroll', function() {
       var sections = document.querySelectorAll('[id]');
-      var navLinks = document.querySelectorAll('.navbar-link');
+      var navLinks = document.querySelectorAll('.nav-links a');
       var currentId = '';
       sections.forEach(function(s) {
         if (s.offsetTop - 100 <= window.scrollY) currentId = s.getAttribute('id');
