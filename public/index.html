@@ -2,8 +2,9 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
   <title>Apex MCC | Michigan's Future Multicultural Community Center</title>
 
   <meta name="title" content="Apex MCC | Michigan's Future Multicultural Community Center">
@@ -24,433 +25,623 @@
   <meta property="twitter:image" content="https://www.apexmcc.org/cdn/Logo.png">
 
   <link rel="icon" type="image/png" href="./cdn/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&family=Nunito:wght@200..1000&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
   <!-- ============================================
-       Navigation
+       NEW NAVBAR
        ============================================ -->
 
-  <nav class="navbar">
-    <a href="index.html" class="navbar-brand">
-      <img src="cdn/apex_long.png" alt="Apex MCC" class="navbar-logo">
+  <header class="site-nav">
+    <a href="index.html" class="site-nav-logo">
+      <img src="cdn/apex_long.png" alt="Apex MCC">
     </a>
 
 ```
-<div class="navbar-center">
-  <a href="#about" class="navbar-link active">About</a>
-  <a href="#pillars" class="navbar-link">Mission</a>
-  <a href="#facts" class="navbar-link">Facts</a>
-</div>
+<nav class="site-nav-links" aria-label="Main navigation">
+  <a href="#about" class="site-nav-link active">About</a>
+  <a href="#pillars" class="site-nav-link">Mission</a>
+  <a href="#facts" class="site-nav-link">Facts</a>
+</nav>
 
-<div class="navbar-right">
-  <a href="donate.html" class="navbar-cta">Donate</a>
-</div>
+<a href="donate.html" class="site-nav-donate">
+  Donate
+</a>
 ```
 
-  </nav>
+  </header>
 
   <!-- ============================================
-       Hero Slideshow
+       HERO / SLIDESHOW
        ============================================ -->
 
-  <section class="hero-slideshow" id="hero">
+  <main>
 
 ```
-<!-- Slide 1 -->
-<div class="slide active" data-index="0">
-  <div class="slide-bg" style="background-image:url('slideshow/5029919.webp')"></div>
-  <div class="slide-overlay"></div>
+<section class="hero-slideshow" id="hero">
 
-  <div class="slide-content">
-    <div class="slide-text">
-      <div class="slide-label">Michigan's Future</div>
+  <!-- Slide 1 -->
+  <div class="slide active" data-index="0">
 
-      <h1 class="slide-heading">
-        Building a
-        <br>
-        <em>Multicultural</em>
-        <br>
-        Future
-      </h1>
+    <div
+      class="slide-bg"
+      style="background-image:url('slideshow/5029919.webp');"
+    ></div>
 
-      <p class="slide-body">
-        Support the Apex MCC cause. Every contribution helps us build a space for diverse communities to thrive and grow together.
-      </p>
+    <div class="slide-overlay"></div>
 
-      <div class="slide-btns">
-        <a href="donate.html" class="slide-btn primary">Donate Now</a>
+    <div class="slide-content">
+      <div class="slide-text">
+
+        <div class="slide-label">
+          Michigan's Future
+        </div>
+
+        <h1 class="slide-heading">
+          Building a
+          <br>
+          <em>Multicultural</em>
+          <br>
+          Future
+        </h1>
+
+        <p class="slide-body">
+          Support the Apex MCC cause. Every contribution helps us build
+          a space for diverse communities to thrive and grow together.
+        </p>
+
+        <div class="slide-btns">
+          <a href="donate.html" class="slide-btn primary">
+            Donate Now
+          </a>
+        </div>
+
       </div>
     </div>
+
   </div>
-</div>
 
-<!-- Slide 2 -->
-<div class="slide" data-index="1">
-  <div class="slide-bg" style="background-image:url('slideshow/d4zf2td.jpg')"></div>
-  <div class="slide-overlay"></div>
 
-  <div class="slide-content">
-    <div class="slide-text">
-      <div class="slide-label">Community Center</div>
+  <!-- Slide 2 -->
+  <div class="slide" data-index="1">
 
-      <h1 class="slide-heading">
-        Where People
-        <br>
-        <em>Connect</em>
-        <br>
-        &amp; Grow
-      </h1>
+    <div
+      class="slide-bg"
+      style="background-image:url('slideshow/d4zf2td.jpg');"
+    ></div>
 
-      <p class="slide-body">
-        A place where diverse communities come together, access resources, and find real opportunities.
-      </p>
+    <div class="slide-overlay"></div>
 
-      <div class="slide-btns">
-        <a href="donate.html" class="slide-btn primary">Support Us</a>
+    <div class="slide-content">
+      <div class="slide-text">
+
+        <div class="slide-label">
+          Community Center
+        </div>
+
+        <h1 class="slide-heading">
+          Where People
+          <br>
+          <em>Connect</em>
+          <br>
+          &amp; Grow
+        </h1>
+
+        <p class="slide-body">
+          A place where diverse communities come together,
+          access resources, and find real opportunities.
+        </p>
+
+        <div class="slide-btns">
+          <a href="donate.html" class="slide-btn primary">
+            Support Us
+          </a>
+        </div>
+
       </div>
     </div>
+
   </div>
-</div>
 
-<!-- Slide 3 -->
-<div class="slide" data-index="2">
-  <div class="slide-bg" style="background-image:url('slideshow/wjtt28t.jpeg')"></div>
-  <div class="slide-overlay"></div>
 
-  <div class="slide-content">
-    <div class="slide-text">
-      <div class="slide-label">Education &amp; Opportunity</div>
+  <!-- Slide 3 -->
+  <div class="slide" data-index="2">
 
-      <h1 class="slide-heading">
-        Empowering
-        <br>
-        <em>Every</em>
-        <br>
-        Individual
-      </h1>
+    <div
+      class="slide-bg"
+      style="background-image:url('slideshow/wjtt28t.jpeg');"
+    ></div>
 
-      <p class="slide-body">
-        Education, community support, resources, and a welcoming environment for all — that's our vision.
-      </p>
+    <div class="slide-overlay"></div>
 
-      <div class="slide-btns">
-        <a href="donate.html" class="slide-btn primary">Donate Now</a>
+    <div class="slide-content">
+      <div class="slide-text">
+
+        <div class="slide-label">
+          Education &amp; Opportunity
+        </div>
+
+        <h1 class="slide-heading">
+          Empowering
+          <br>
+          <em>Every</em>
+          <br>
+          Individual
+        </h1>
+
+        <p class="slide-body">
+          Education, community support, resources, and a welcoming
+          environment for all — that's our vision.
+        </p>
+
+        <div class="slide-btns">
+          <a href="donate.html" class="slide-btn primary">
+            Donate Now
+          </a>
+        </div>
+
       </div>
     </div>
+
   </div>
-</div>
 
-<!-- Slide 4 -->
-<div class="slide" data-index="3">
-  <div class="slide-bg" style="background-image:url('slideshow/overhang.webp')"></div>
-  <div class="slide-overlay"></div>
 
-  <div class="slide-content">
-    <div class="slide-text">
-      <div class="slide-label">Coming Soon</div>
+  <!-- Slide 4 -->
+  <div class="slide" data-index="3">
 
-      <h1 class="slide-heading">
-        People.
-        <br>
-        <em>Community.</em>
-        <br>
-        Opportunity.
-      </h1>
+    <div
+      class="slide-bg"
+      style="background-image:url('slideshow/overhang.webp');"
+    ></div>
 
-      <p class="slide-body">
-        We're still building, but our focus remains simple — creating a space where everyone belongs.
-      </p>
+    <div class="slide-overlay"></div>
 
-      <div class="slide-btns">
-        <a href="donate.html" class="slide-btn primary">Get Involved</a>
+    <div class="slide-content">
+      <div class="slide-text">
+
+        <div class="slide-label">
+          Coming Soon
+        </div>
+
+        <h1 class="slide-heading">
+          People.
+          <br>
+          <em>Community.</em>
+          <br>
+          Opportunity.
+        </h1>
+
+        <p class="slide-body">
+          We're still building, but our focus remains simple —
+          creating a space where everyone belongs.
+        </p>
+
+        <div class="slide-btns">
+          <a href="donate.html" class="slide-btn primary">
+            Get Involved
+          </a>
+        </div>
+
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Slideshow Controls -->
-<div class="slideshow-controls">
-
-  <div class="slide-dots">
-    <button class="slide-dot active" data-slide="0" aria-label="Slide 1"></button>
-    <button class="slide-dot" data-slide="1" aria-label="Slide 2"></button>
-    <button class="slide-dot" data-slide="2" aria-label="Slide 3"></button>
-    <button class="slide-dot" data-slide="3" aria-label="Slide 4"></button>
   </div>
 
-  <div class="slideshow-right-controls">
-    <span class="slide-counter">
-      <span class="current">01</span> / 04
-    </span>
-
-    <div class="slide-arrows">
-      <button class="slide-arrow" id="prevSlide" aria-label="Previous">
-        &#8592;
-      </button>
-
-      <button class="slide-arrow" id="nextSlide" aria-label="Next">
-        &#8594;
-      </button>
-    </div>
-  </div>
-
-</div>
-```
-
-  </section>
 
   <!-- ============================================
-       About
+       SLIDESHOW CONTROLS
        ============================================ -->
 
-  <section class="about-section" id="about">
-    <h2>What Is Apex MCC?</h2>
+  <div class="slideshow-controls">
 
-```
-<p>
-  Apex MCC is a non-profit organization based in Michigan focused on creating a future community space that supports and empowers individuals in need.
-</p>
+    <div class="slide-dots">
+      <button
+        class="slide-dot active"
+        data-slide="0"
+        aria-label="Slide 1"
+      ></button>
 
-<p>
-  We're currently in the early stages of developing our vision. Our goal is to create a place where people can connect, access resources, find opportunities, and grow.
-</p>
+      <button
+        class="slide-dot"
+        data-slide="1"
+        aria-label="Slide 2"
+      ></button>
 
-<p>
-  Our vision includes education, community support, resources, events, and a welcoming environment for all.
-</p>
+      <button
+        class="slide-dot"
+        data-slide="2"
+        aria-label="Slide 3"
+      ></button>
 
-<p class="tagline">
-  People. Community. Opportunity.
-</p>
-```
+      <button
+        class="slide-dot"
+        data-slide="3"
+        aria-label="Slide 4"
+      ></button>
+    </div>
 
-  </section>
 
-  <!-- ============================================
-       Mission / Pillars
-       ============================================ -->
+    <div class="slideshow-right-controls">
 
-  <section class="pillars-section" id="pillars">
+      <span class="slide-counter">
+        <span class="current">01</span>
+        / 04
+      </span>
 
-```
-<div class="pillars-header">
-  <div class="pillars-label">Our Mission</div>
+      <div class="slide-arrows">
+
+        <button
+          class="slide-arrow"
+          id="prevSlide"
+          aria-label="Previous slide"
+        >
+          &#8592;
+        </button>
+
+        <button
+          class="slide-arrow"
+          id="nextSlide"
+          aria-label="Next slide"
+        >
+          &#8594;
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ============================================
+     ABOUT
+     ============================================ -->
+
+<section class="about-section" id="about">
 
   <h2>
-    Building a Stronger Michigan,
-    <br>
-    <em style="color:#3bc94e;font-style:normal;">Together</em>
+    What Is Apex MCC?
   </h2>
 
   <p>
-    Apex MCC is driven by three core commitments that guide everything we do — from programming and partnerships to the spaces we create.
+    Apex MCC is a non-profit organization based in Michigan focused
+    on creating a future community space that supports and empowers
+    individuals in need.
   </p>
-</div>
 
-<div class="pillars-grid">
+  <p>
+    We're currently in the early stages of developing our vision.
+    Our goal is to create a place where people can connect, access
+    resources, find opportunities, and grow.
+  </p>
 
-  <!-- Education -->
-  <div class="pillar-card" style="--pillar-color:#3bc94e;">
-    <div class="pillar-card-bg" style="background-image:url('slideshow/5029919.webp');"></div>
-    <div class="pillar-card-overlay"></div>
-    <div class="pillar-card-color"></div>
+  <p>
+    Our vision includes education, community support, resources,
+    events, and a welcoming environment for all.
+  </p>
 
-    <div class="pillar-card-title">
-      <h3>Education</h3>
+  <p class="tagline">
+    People. Community. Opportunity.
+  </p>
+
+</section>
+
+
+<!-- ============================================
+     MISSION / PILLARS
+     ============================================ -->
+
+<section class="pillars-section" id="pillars">
+
+  <div class="pillars-header">
+
+    <div class="pillars-label">
+      Our Mission
     </div>
-
-    <div class="pillar-card-desc">
-      <div class="pillar-num">01</div>
-      <h3>Education</h3>
-      <p>
-        We provide knowledge, skills, and mentorship for those who need it most — creating pathways to growth through accessible learning and support.
-      </p>
-    </div>
-
-    <div class="pillar-card-arrow">
-      <svg viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"/>
-      </svg>
-    </div>
-  </div>
-
-  <!-- Community -->
-  <div class="pillar-card" style="--pillar-color:#3bc94e;">
-    <div class="pillar-card-bg" style="background-image:url('slideshow/d4zf2td.jpg');"></div>
-    <div class="pillar-card-overlay"></div>
-    <div class="pillar-card-color"></div>
-
-    <div class="pillar-card-title">
-      <h3>Community</h3>
-    </div>
-
-    <div class="pillar-card-desc">
-      <div class="pillar-num">02</div>
-      <h3>Community</h3>
-      <p>
-        We build a space where diverse groups come together, share experiences, and look out for one another — strengthening bonds across cultures.
-      </p>
-    </div>
-
-    <div class="pillar-card-arrow">
-      <svg viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"/>
-      </svg>
-    </div>
-  </div>
-
-  <!-- Opportunity -->
-  <div class="pillar-card" style="--pillar-color:#3bc94e;">
-    <div class="pillar-card-bg" style="background-image:url('slideshow/wjtt28t.jpeg');"></div>
-    <div class="pillar-card-overlay"></div>
-    <div class="pillar-card-color"></div>
-
-    <div class="pillar-card-title">
-      <h3>Opportunity</h3>
-    </div>
-
-    <div class="pillar-card-desc">
-      <div class="pillar-num">03</div>
-      <h3>Opportunity</h3>
-      <p>
-        We create real pathways — through resources, events, and connections — that help people move forward and unlock their full potential.
-      </p>
-    </div>
-
-    <div class="pillar-card-arrow">
-      <svg viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"/>
-      </svg>
-    </div>
-  </div>
-
-</div>
-```
-
-  </section>
-
-  <!-- ============================================
-       Facts
-       ============================================ -->
-
-  <section class="facts-section" id="facts">
-
-```
-<div class="facts-inner">
-
-  <div class="facts-header">
-    <div class="facts-label">Did You Know?</div>
 
     <h2>
-      Facts About
-      <em style="color:#3bc94e;font-style:normal;">Apex MCC</em>
+      Building a Stronger Michigan,
+      <br>
+      <em style="color:#3bc94e;font-style:normal;">
+        Together
+      </em>
     </h2>
-  </div>
 
-  <div class="facts-grid">
-
-    <div class="fact-card">
-      <div class="fact-icon">📊</div>
-      <div class="fact-num">COMING SOON</div>
-      <p>_FACTS PROVIDED SOON_</p>
-    </div>
-
-    <div class="fact-card">
-      <div class="fact-icon">📊</div>
-      <div class="fact-num">COMING SOON</div>
-      <p>_FACTS PROVIDED SOON_</p>
-    </div>
-
-    <div class="fact-card">
-      <div class="fact-icon">📊</div>
-      <div class="fact-num">COMING SOON</div>
-      <p>_FACTS PROVIDED SOON_</p>
-    </div>
-
-    <div class="fact-card">
-      <div class="fact-icon">📊</div>
-      <div class="fact-num">COMING SOON</div>
-      <p>_FACTS PROVIDED SOON_</p>
-    </div>
+    <p>
+      Apex MCC is driven by three core commitments that guide
+      everything we do — from programming and partnerships to
+      the spaces we create.
+    </p>
 
   </div>
-</div>
+
+
+  <div class="pillars-grid">
+
+    <!-- Education -->
+    <div
+      class="pillar-card"
+      style="--pillar-color:#3bc94e;"
+    >
+
+      <div
+        class="pillar-card-bg"
+        style="background-image:url('slideshow/5029919.webp');"
+      ></div>
+
+      <div class="pillar-card-overlay"></div>
+
+      <div class="pillar-card-color"></div>
+
+      <div class="pillar-card-title">
+        <h3>
+          Education
+        </h3>
+      </div>
+
+      <div class="pillar-card-desc">
+
+        <div class="pillar-num">
+          01
+        </div>
+
+        <h3>
+          Education
+        </h3>
+
+        <p>
+          We provide knowledge, skills, and mentorship for those
+          who need it most — creating pathways to growth through
+          accessible learning and support.
+        </p>
+
+      </div>
+
+      <div class="pillar-card-arrow">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </div>
+
+    </div>
+
+
+    <!-- Community -->
+    <div
+      class="pillar-card"
+      style="--pillar-color:#3bc94e;"
+    >
+
+      <div
+        class="pillar-card-bg"
+        style="background-image:url('slideshow/d4zf2td.jpg');"
+      ></div>
+
+      <div class="pillar-card-overlay"></div>
+
+      <div class="pillar-card-color"></div>
+
+      <div class="pillar-card-title">
+        <h3>
+          Community
+        </h3>
+      </div>
+
+      <div class="pillar-card-desc">
+
+        <div class="pillar-num">
+          02
+        </div>
+
+        <h3>
+          Community
+        </h3>
+
+        <p>
+          We build a space where diverse groups come together,
+          share experiences, and look out for one another —
+          strengthening bonds across cultures.
+        </p>
+
+      </div>
+
+      <div class="pillar-card-arrow">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </div>
+
+    </div>
+
+
+    <!-- Opportunity -->
+    <div
+      class="pillar-card"
+      style="--pillar-color:#3bc94e;"
+    >
+
+      <div
+        class="pillar-card-bg"
+        style="background-image:url('slideshow/wjtt28t.jpeg');"
+      ></div>
+
+      <div class="pillar-card-overlay"></div>
+
+      <div class="pillar-card-color"></div>
+
+      <div class="pillar-card-title">
+        <h3>
+          Opportunity
+        </h3>
+      </div>
+
+      <div class="pillar-card-desc">
+
+        <div class="pillar-num">
+          03
+        </div>
+
+        <h3>
+          Opportunity
+        </h3>
+
+        <p>
+          We create real pathways — through resources, events,
+          and connections — that help people move forward and
+          unlock their full potential.
+        </p>
+
+      </div>
+
+      <div class="pillar-card-arrow">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ============================================
+     FACTS
+     ============================================ -->
+
+<section class="facts-section" id="facts">
+
+  <div class="facts-inner">
+
+    <div class="facts-header">
+
+      <div class="facts-label">
+        Did You Know?
+      </div>
+
+      <h2>
+        Facts About
+        <em style="color:#3bc94e;font-style:normal;">
+          Apex MCC
+        </em>
+      </h2>
+
+    </div>
+
+
+    <div class="facts-grid">
+
+      <div class="fact-card">
+        <div class="fact-icon">📊</div>
+        <div class="fact-num">COMING SOON</div>
+        <p>_FACTS PROVIDED SOON_</p>
+      </div>
+
+      <div class="fact-card">
+        <div class="fact-icon">📊</div>
+        <div class="fact-num">COMING SOON</div>
+        <p>_FACTS PROVIDED SOON_</p>
+      </div>
+
+      <div class="fact-card">
+        <div class="fact-icon">📊</div>
+        <div class="fact-num">COMING SOON</div>
+        <p>_FACTS PROVIDED SOON_</p>
+      </div>
+
+      <div class="fact-card">
+        <div class="fact-icon">📊</div>
+        <div class="fact-num">COMING SOON</div>
+        <p>_FACTS PROVIDED SOON_</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ============================================
+     PARTNERS / MARQUEE
+     ============================================ -->
+
+<section class="marquee-section">
+
+  <p class="marquee-label">
+    Trusted &amp; Supported By
+  </p>
+
+  <div class="marquee-track">
+
+    <div class="marquee-item">
+      <img src="cdn/image-11.webp" alt="OCEC">
+    </div>
+
+    <div class="marquee-item">
+      <img src="cdn/lavadev.webp" alt="Lavadev">
+    </div>
+
+    <div class="marquee-item">
+      <img src="cdn/image-11.webp" alt="OCEC">
+    </div>
+
+    <div class="marquee-item">
+      <img src="cdn/lavadev.webp" alt="Lavadev">
+    </div>
+
+    <div class="marquee-item">
+      <img src="cdn/image-11.webp" alt="OCEC">
+    </div>
+
+    <div class="marquee-item">
+      <img src="cdn/lavadev.webp" alt="Lavadev">
+    </div>
+
+    <div class="marquee-item">
+      <img src="cdn/image-11.webp" alt="OCEC">
+    </div>
+
+    <div class="marquee-item">
+      <img src="cdn/lavadev.webp" alt="Lavadev">
+    </div>
+
+    <div class="marquee-item">
+      <img src="cdn/image-11.webp" alt="OCEC">
+    </div>
+
+    <div class="marquee-item">
+      <img src="cdn/lavadev.webp" alt="Lavadev">
+    </div>
+
+    <div class="marquee-item">
+      <img src="cdn/image-11.webp" alt="OCEC">
+    </div>
+
+    <div class="marquee-item">
+      <img src="cdn/lavadev.webp" alt="Lavadev">
+    </div>
+
+  </div>
+
+</section>
 ```
 
-  </section>
+  </main>
 
   <!-- ============================================
-       Supported By
-       ============================================ -->
-
-  <section class="marquee-section">
-
-```
-<p class="marquee-label">
-  Trusted &amp; Supported By
-</p>
-
-<div class="marquee-track">
-
-  <div class="marquee-item">
-    <img src="cdn/image-11.webp" alt="OCEC">
-  </div>
-
-  <div class="marquee-item">
-    <img src="cdn/lavadev.webp" alt="Lavadev">
-  </div>
-
-  <div class="marquee-item">
-    <img src="cdn/image-11.webp" alt="OCEC">
-  </div>
-
-  <div class="marquee-item">
-    <img src="cdn/lavadev.webp" alt="Lavadev">
-  </div>
-
-  <div class="marquee-item">
-    <img src="cdn/image-11.webp" alt="OCEC">
-  </div>
-
-  <div class="marquee-item">
-    <img src="cdn/lavadev.webp" alt="Lavadev">
-  </div>
-
-  <div class="marquee-item">
-    <img src="cdn/image-11.webp" alt="OCEC">
-  </div>
-
-  <div class="marquee-item">
-    <img src="cdn/lavadev.webp" alt="Lavadev">
-  </div>
-
-  <div class="marquee-item">
-    <img src="cdn/image-11.webp" alt="OCEC">
-  </div>
-
-  <div class="marquee-item">
-    <img src="cdn/lavadev.webp" alt="Lavadev">
-  </div>
-
-  <div class="marquee-item">
-    <img src="cdn/image-11.webp" alt="OCEC">
-  </div>
-
-  <div class="marquee-item">
-    <img src="cdn/lavadev.webp" alt="Lavadev">
-  </div>
-
-</div>
-```
-
-  </section>
-
-  <!-- ============================================
-       Footer
+       FOOTER
        ============================================ -->
 
   <footer class="site-footer">
@@ -459,7 +650,10 @@
 <div class="footer-main">
 
   <div class="footer-newsletter">
-    <h3>Don't Miss Out</h3>
+
+    <h3>
+      Don't Miss Out
+    </h3>
 
     <p>
       Sign up for the latest news, events, and updates from Apex MCC.
@@ -470,8 +664,10 @@
       action="https://formspree.io/f/xrpgeegw"
       method="POST"
     >
+
       <label>
         EMAIL ADDRESS*
+
         <input
           type="email"
           name="email"
@@ -480,86 +676,149 @@
         >
       </label>
 
-      <button type="submit" class="footer-signup">
+      <button
+        type="submit"
+        class="footer-signup"
+      >
         SIGN UP
       </button>
+
     </form>
 
     <p class="footer-disclaimer">
-      By signing up, you agree to receive updates from Apex MCC. You can unsubscribe at any time.
+      By signing up, you agree to receive updates from Apex MCC.
+      You can unsubscribe at any time.
     </p>
+
   </div>
 
+
   <div class="footer-col">
-    <h4>About</h4>
+
+    <h4>
+      About
+    </h4>
 
     <ul>
       <li>
-        <a href="#about">What Is Apex MCC</a>
+        <a href="#about">
+          What Is Apex MCC
+        </a>
       </li>
 
       <li>
-        <a href="#pillars">Our Mission</a>
+        <a href="#pillars">
+          Our Mission
+        </a>
       </li>
 
       <li>
-        <a href="https://www.apexmcc.org/" target="_blank" rel="noopener">
+        <a
+          href="https://www.apexmcc.org/"
+          target="_blank"
+          rel="noopener"
+        >
           Official Website
         </a>
       </li>
     </ul>
+
   </div>
 
+
   <div class="footer-col">
-    <h4>Get Involved</h4>
+
+    <h4>
+      Get Involved
+    </h4>
 
     <ul>
       <li>
-        <a href="donate.html">Donate</a>
+        <a href="donate.html">
+          Donate
+        </a>
       </li>
 
       <li>
-        <a href="#">Volunteer — Coming Soon</a>
+        <a href="#">
+          Volunteer — Coming Soon
+        </a>
       </li>
 
       <li>
-        <a href="#">Interest Form — Coming Soon</a>
+        <a href="#">
+          Interest Form — Coming Soon
+        </a>
       </li>
     </ul>
+
   </div>
 
+
   <div class="footer-col">
-    <h4>Connect</h4>
+
+    <h4>
+      Connect
+    </h4>
 
     <ul>
       <li>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener"
+        >
           Instagram
         </a>
       </li>
 
       <li>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener"
+        >
           Facebook
         </a>
       </li>
 
       <li>
-        <a href="https://x.com/ApexMCC" target="_blank" rel="noopener">
+        <a
+          href="https://x.com/ApexMCC"
+          target="_blank"
+          rel="noopener"
+        >
           X (Twitter)
         </a>
       </li>
 
       <li>
-        <a href="https://www.tiktok.com/" target="_blank" rel="noopener">
+        <a
+          href="https://www.tiktok.com/"
+          target="_blank"
+          rel="noopener"
+        >
           TikTok
         </a>
       </li>
+
+      <li>
+        <a
+          href="https://www.linkedin.com/company/apexmcc/"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn
+        </a>
+      </li>
     </ul>
+
   </div>
 
 </div>
 
+
+<!-- Footer social -->
 <div class="footer-social">
 
   <div class="footer-social-icons">
@@ -570,11 +829,7 @@
       rel="noopener"
       aria-label="Instagram"
     >
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-        <circle cx="12" cy="12" r="5"/>
-        <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
-      </svg>
+      Instagram
     </a>
 
     <a
@@ -583,9 +838,7 @@
       rel="noopener"
       aria-label="Facebook"
     >
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-      </svg>
+      Facebook
     </a>
 
     <a
@@ -594,9 +847,7 @@
       rel="noopener"
       aria-label="X"
     >
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-      </svg>
+      X
     </a>
 
     <a
@@ -605,9 +856,7 @@
       rel="noopener"
       aria-label="TikTok"
     >
-      <svg width="14" height="16" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-3.95V2h-3.6v14.5a2.9 2.9 0 1 1-2-2.76V10.1a6.5 6.5 0 1 0 5.6 6.4V9.21a8.5 8.5 0 0 0 5.1 1.69V7.3a4.8 4.8 0 0 1-1.33-.61z"/>
-      </svg>
+      TikTok
     </a>
 
     <a
@@ -616,22 +865,29 @@
       rel="noopener"
       aria-label="LinkedIn"
     >
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-        <rect x="2" y="9" width="4" height="12"/>
-        <circle cx="4" cy="4" r="2"/>
-      </svg>
+      LinkedIn
     </a>
 
   </div>
+
 </div>
 
+
+<!-- Footer bottom -->
 <div class="footer-bottom">
 
   <div class="footer-links">
-    <a href="#">SITE MAP</a>
-    <a href="#">PRIVACY</a>
-    <a href="#">TERMS</a>
+    <a href="#">
+      SITE MAP
+    </a>
+
+    <a href="#">
+      PRIVACY
+    </a>
+
+    <a href="#">
+      TERMS
+    </a>
   </div>
 
   <span class="footer-copy">
@@ -651,14 +907,14 @@
   </footer>
 
   <!-- ============================================
-       JavaScript
+       JAVASCRIPT
        ============================================ -->
 
   <script>
 
-    /* ==========================================
+    /* ============================================
        Slideshow
-       ========================================== */
+       ============================================ */
 
     var slides = document.querySelectorAll('.slide');
     var dots = document.querySelectorAll('.slide-dot');
@@ -667,10 +923,14 @@
     var current = 0;
     var autoplayTimer;
 
+
+    /* Video support */
+
     var knownVideos = {
       0: 'slideshow/j1nqztw.mp4',
       3: 'slideshow/j1nqztw.mp4'
     };
+
 
     slides.forEach(function(slide, i) {
 
@@ -685,6 +945,7 @@
 
       vid.src = 'slideshow/slide-' + i + '.mp4';
 
+
       vid.addEventListener('error', function() {
 
         if (knownVideos[i]) {
@@ -693,9 +954,12 @@
 
       });
 
+
       vid.addEventListener('loadeddata', function() {
 
-        bg.appendChild(vid);
+        if (!bg.contains(vid)) {
+          bg.appendChild(vid);
+        }
 
         if (slide.classList.contains('active')) {
           vid.play().catch(function() {});
@@ -705,102 +969,141 @@
 
     });
 
+
     function goToSlide(index) {
 
-      var outVideo = slides[current].querySelector('video');
+      var outgoingVideo =
+        slides[current].querySelector('video');
 
-      if (outVideo) {
-        outVideo.pause();
+      if (outgoingVideo) {
+        outgoingVideo.pause();
       }
 
+
       slides[current].classList.remove('active');
+
       dots[current].classList.remove('active');
 
-      current = (index + slides.length) % slides.length;
+
+      current =
+        (index + slides.length) % slides.length;
+
 
       slides[current].classList.add('active');
+
       dots[current].classList.add('active');
+
 
       counter.textContent =
         current + 1 < 10
           ? '0' + (current + 1)
           : '' + (current + 1);
 
-      var inVideo = slides[current].querySelector('video');
 
-      if (inVideo) {
-        inVideo.play().catch(function() {});
+      var incomingVideo =
+        slides[current].querySelector('video');
+
+      if (incomingVideo) {
+        incomingVideo.play().catch(function() {});
       }
+
     }
 
-    document.getElementById('nextSlide').addEventListener('click', function() {
-      goToSlide(current + 1);
-      resetAutoplay();
-    });
 
-    document.getElementById('prevSlide').addEventListener('click', function() {
-      goToSlide(current - 1);
-      resetAutoplay();
-    });
+    document
+      .getElementById('nextSlide')
+      .addEventListener('click', function() {
+
+        goToSlide(current + 1);
+        resetAutoplay();
+
+      });
+
+
+    document
+      .getElementById('prevSlide')
+      .addEventListener('click', function() {
+
+        goToSlide(current - 1);
+        resetAutoplay();
+
+      });
+
 
     dots.forEach(function(dot) {
 
       dot.addEventListener('click', function() {
 
-        goToSlide(parseInt(dot.dataset.slide));
+        goToSlide(
+          parseInt(dot.dataset.slide)
+        );
+
         resetAutoplay();
 
       });
 
     });
 
+
     function resetAutoplay() {
 
       clearInterval(autoplayTimer);
 
       autoplayTimer = setInterval(function() {
+
         goToSlide(current + 1);
+
       }, 6000);
 
     }
 
+
     resetAutoplay();
 
-    /* ==========================================
-       Keyboard Navigation
-       ========================================== */
+
+    /* Keyboard navigation */
 
     document.addEventListener('keydown', function(e) {
 
       if (e.key === 'ArrowRight') {
+
         goToSlide(current + 1);
         resetAutoplay();
+
       }
 
       if (e.key === 'ArrowLeft') {
+
         goToSlide(current - 1);
         resetAutoplay();
+
       }
 
     });
 
-    /* ==========================================
-       Navbar Active Section
-       ========================================== */
+
+    /* ============================================
+       Active navigation
+       ============================================ */
 
     window.addEventListener('scroll', function() {
 
-      var sections = document.querySelectorAll(
-        '#about, #pillars, #facts'
-      );
+      var sections = [
+        document.getElementById('about'),
+        document.getElementById('pillars'),
+        document.getElementById('facts')
+      ];
 
-      var navLinks = document.querySelectorAll('.navbar-link');
+      var navLinks =
+        document.querySelectorAll('.site-nav-link');
 
       var currentId = '';
+
 
       sections.forEach(function(section) {
 
         if (
+          section &&
           section.offsetTop - 180 <= window.scrollY
         ) {
           currentId = section.getAttribute('id');
@@ -808,12 +1111,14 @@
 
       });
 
+
       navLinks.forEach(function(link) {
 
         link.classList.remove('active');
 
         if (
-          link.getAttribute('href') === '#' + currentId
+          link.getAttribute('href') ===
+          '#' + currentId
         ) {
           link.classList.add('active');
         }
