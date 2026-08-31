@@ -482,7 +482,7 @@ html, body {
 @media (max-width: 768px) {
   :root { --controls-height: 72px; }
 
-  .nav-container { width: min(calc(100% - 32px), 1280px); }
+  .nav-container { width: min(calc(100% - 64px), 1280px); }
 
   .mobile-menu-button { display: flex; }
 
@@ -508,19 +508,20 @@ html, body {
   .mobile-menu-toggle:checked + .mobile-menu-button span:nth-child(2) { opacity: 0; }
   .mobile-menu-toggle:checked + .mobile-menu-button span:nth-child(3) { transform: translateY(-11px) rotate(-45deg); }
 
-  .hero { height: 700px; }
+  .hero { height: 780px; }
 
   .slide-content {
     top: var(--nav-height);
     bottom: var(--controls-height);
-    width: min(calc(100% - 32px), 1280px);
+    width: min(calc(100% - 64px), 1280px);
     padding: 25px 0;
   }
 
   .slide-1-layout { grid-template-columns: 1fr; gap: 24px; }
-  .slide-1-title { font-size: clamp(3.8rem, 13vw, 6.5rem); }
-  .slide-heading { font-size: clamp(3.8rem, 13vw, 6.5rem); }
-  .slide-body { font-size: 16px; }
+  .slide-1-layout .funding-card { transform: none; }
+  .slide-1-title { font-size: clamp(3rem, 11vw, 4.6rem); }
+  .slide-heading { font-size: clamp(3rem, 11vw, 4.6rem); }
+  .slide-body { font-size: 15px; }
 
   .slide[data-index="1"] .slide-content,
   .slide[data-index="2"] .slide-content,
@@ -528,20 +529,20 @@ html, body {
     align-items: center;
     padding: 20px 0;
   }
-  .slide[data-index="1"] .slide-heading { font-size: clamp(3.5rem, 13vw, 6rem); line-height: 0.86; }
+  .slide[data-index="1"] .slide-heading { font-size: clamp(2.8rem, 10vw, 4.2rem); line-height: 0.86; }
 
   .funding-card { padding: 18px; }
   .slide-btns { flex-direction: column; }
   .funding-card .slide-btns { flex-direction: column; }
 
-  .slideshow-controls { width: min(calc(100% - 32px), 1280px); }
+  .slideshow-controls { width: min(calc(100% - 64px), 1280px); }
 }
 
 @media (max-width: 600px) {
-  .hero { height: 680px; }
+  .hero { height: 760px; }
   .slide-content { width: calc(100% - 48px); padding: 15px 0; }
   .slide-1-title,
-  .slide-heading { font-size: clamp(3.3rem, 16vw, 5.5rem); }
+  .slide-heading { font-size: clamp(2.7rem, 14vw, 3.9rem); }
   .slide-label { font-size: 14px; }
   .slide-body { font-size: 15px; }
   .slideshow-controls { width: calc(100% - 48px); }
@@ -778,7 +779,7 @@ html, body {
 
 /* Responsive */
 @media (max-width: 1000px) {
-  .pillars-section { padding: 60px 32px; }
+  .pillars-section { padding: 60px 40px; }
   .pillars-grid { flex-direction: column; align-items: center; }
   .pillar-card { width: 100%; max-width: 400px; height: 400px; }
 }
@@ -1043,12 +1044,32 @@ html, body {
    Responsive
    ============================================ */
 @media (max-width: 1000px) {
-  .about-section { padding: 60px 32px; }
-  .mission-inner { padding: 0 32px; }
+  .about-section { padding: 60px 40px; }
+  .mission-inner { padding: 0 40px; }
   .mission-grid { grid-template-columns: 1fr; }
 
-  .footer-main { grid-template-columns: 1fr; padding: 40px 32px; }
-  .footer-social, .footer-bottom, .footer-legal { padding-left: 32px; padding-right: 32px; }
+  .footer-main { grid-template-columns: 1fr; padding: 40px 40px; }
+  .footer-social, .footer-bottom, .footer-legal { padding-left: 40px; padding-right: 40px; }
   .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
   .footer-links { flex-wrap: wrap; justify-content: center; }
+}
+
+/* ============================================
+   Phone
+   ============================================ */
+@media (max-width: 600px) {
+  .about-section,
+  .pillars-section,
+  .facts-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer-main,
+  .footer-social,
+  .footer-bottom,
+  .footer-legal {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
