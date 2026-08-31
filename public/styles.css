@@ -1029,94 +1029,6 @@ html, body {
 }
 
 /* ============================================
-   Facts Section
-   ============================================ */
-.facts-section {
-  padding: 100px 80px;
-  background: rgba(255,255,255,0.02);
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-
-.facts-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.facts-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.facts-label {
-  display: inline-block;
-  font-family: 'Nunito', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #3bc94e;
-  margin-bottom: 16px;
-}
-
-.facts-header h2 {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: #fff;
-  margin: 0;
-}
-
-.facts-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.fact-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 16px;
-  padding: 36px 24px;
-  text-align: center;
-  transition: 0.25s;
-}
-
-.fact-card:hover {
-  border-color: rgba(59, 201, 78, 0.25);
-  transform: translateY(-3px);
-}
-
-.fact-icon {
-  font-size: 2rem;
-  margin-bottom: 16px;
-}
-
-.fact-num {
-  font-family: 'Nunito', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 800;
-  color: rgba(59,201,78,0.6);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.fact-card p {
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.5);
-  line-height: 1.6;
-}
-
-@media (max-width: 1000px) {
-  .facts-section { padding: 60px 32px; }
-  .facts-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 600px) {
-  .facts-grid { grid-template-columns: 1fr; }
-}
-
-/* ============================================
    Scrollbar Hide
    ============================================ */
 .scrollable-element {
@@ -1139,9 +1051,4 @@ html, body {
   .footer-social, .footer-bottom, .footer-legal { padding-left: 32px; padding-right: 32px; }
   .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
   .footer-links { flex-wrap: wrap; justify-content: center; }
-}
-
-@media (max-width: 600px) {
-  .fact-card { padding: 28px 20px; }
-}
 }
