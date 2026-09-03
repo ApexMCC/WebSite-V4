@@ -794,174 +794,142 @@ html, body {
    ============================================ */
 .site-footer {
   background: #000;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  font-size: 13px;
+  border-top: 1px solid rgba(255,255,255,0.1);
   color: rgba(255,255,255,0.6);
+  font-family: 'Nunito Sans', sans-serif;
 }
 .site-footer a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.15s; }
 .site-footer a:hover { color: #fff; }
 
-.footer-main {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1fr;
-  gap: 40px;
-  padding: 56px 80px 48px;
-  max-width: 1400px;
+.footer-inner {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 72px 48px 36px;
 }
 
-.footer-newsletter h3 {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 1.1rem;
-  color: #fff;
-  margin-bottom: 10px;
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 2.2fr;
+  gap: 64px;
+  align-items: start;
 }
-.footer-newsletter p {
-  font-size: 0.85rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: rgba(255,255,255,0.5);
+
+/* brand block */
+.footer-logo { display: inline-block; }
+.footer-logo img { height: 26px; width: auto; }
+.footer-tagline {
+  margin-top: 14px;
+  max-width: 300px;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.55);
 }
 .footer-form {
+  margin-top: 22px;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.footer-form label {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 4px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-}
-.footer-form input {
-  padding: 11px 14px;
+  max-width: 360px;
+  padding: 5px 5px 5px 18px;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 999px;
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 8px;
-  color: #fff;
-  font-size: 13px;
-  font-family: 'Nunito Sans', sans-serif;
-  outline: none;
   transition: border-color 0.15s;
 }
-.footer-form input:focus { border-color: #3bc94e; }
-.footer-form input::placeholder { color: rgba(255,255,255,0.25); }
-.footer-signup {
-  width: 100%;
-  padding: 12px;
+.footer-form:focus-within { border-color: rgba(255,255,255,0.4); }
+.footer-form input {
+  flex: 1;
+  min-width: 0;
   background: transparent;
-  border: 1.5px solid rgba(255,255,255,0.25);
-  border-radius: 8px;
+  border: none;
+  outline: none;
   color: #fff;
-  font-family: 'Nunito', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: 0.2s;
-  margin-top: 4px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.875rem;
 }
-.footer-signup:hover { border-color: #3bc94e; color: #3bc94e; }
-.footer-disclaimer {
-  font-size: 10px;
+.footer-form input::placeholder { color: rgba(255,255,255,0.32); }
+.footer-form button {
+  flex-shrink: 0;
+  height: 36px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 999px;
+  background: #fff;
+  color: #000;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.footer-form button:hover { background: rgba(255,255,255,0.85); }
+.footer-note {
+  margin-top: 12px;
+  max-width: 320px;
+  font-size: 0.75rem;
   line-height: 1.5;
-  color: rgba(255,255,255,0.3);
-  margin-top: 14px;
+  color: rgba(255,255,255,0.35);
 }
 
-.footer-col h4 {
+/* link columns */
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 40px;
+}
+.footer-col-title {
   font-family: 'Nunito', sans-serif;
-  font-size: 11px;
+  font-size: 0.8125rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-  margin-bottom: 18px;
+  color: #fff;
+  margin-bottom: 16px;
 }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.footer-col a { font-size: 13px; }
+.footer-col a, .footer-soon { font-size: 0.875rem; line-height: 1.4; }
+.footer-soon { color: rgba(255,255,255,0.3); }
 
-.footer-social {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px 80px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.footer-social-icons {
-  display: flex;
-  gap: 12px;
-}
-.footer-social-icons a {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  transition: 0.2s;
-}
-.footer-social-icons a:hover { border-color: #3bc94e; color: #3bc94e; }
-
+/* bottom bar */
 .footer-bottom {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 80px 28px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  max-width: 1400px;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.4);
 }
-.footer-links {
-  display: flex;
-  gap: 20px;
-}
-.footer-links a {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-}
-.footer-copy {
-  font-size: 11px;
-  color: rgba(255,255,255,0.3);
-}
+.footer-links { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
+.footer-links a { font-size: 0.8125rem; color: rgba(255,255,255,0.4); }
+.footer-links a:hover { color: #fff; }
+.footer-copy { font-size: 0.8125rem; color: rgba(255,255,255,0.4); }
 .footer-top {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-  cursor: pointer;
-  transition: color 0.15s;
   background: none;
   border: none;
+  padding: 0;
+  margin: 0 0 0 8px;
+  color: rgba(255,255,255,0.4);
   font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: color 0.15s;
 }
 .footer-top:hover { color: #fff; }
 
-.footer-legal {
-  padding: 20px 80px 32px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  max-width: 1400px;
-  margin: 0 auto;
+@media (max-width: 1000px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 48px; }
+  .footer-inner { padding: 56px 32px 32px; }
+  .footer-bottom { margin-top: 48px; }
 }
-.footer-legal p {
-  font-size: 10.5px;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.25);
+@media (max-width: 640px) {
+  .footer-cols { grid-template-columns: repeat(2, 1fr); gap: 32px 24px; }
 }
-.footer-legal a { text-decoration: underline; }
+@media (max-width: 480px) {
+  .footer-cols { grid-template-columns: 1fr; }
+  .footer-form { max-width: 100%; }
+}
 
 /* ============================================
    Logo Marquee
@@ -1047,11 +1015,6 @@ html, body {
   .about-section { padding: 60px 40px; }
   .mission-inner { padding: 0 40px; }
   .mission-grid { grid-template-columns: 1fr; }
-
-  .footer-main { grid-template-columns: 1fr; padding: 40px 40px; }
-  .footer-social, .footer-bottom, .footer-legal { padding-left: 40px; padding-right: 40px; }
-  .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
-  .footer-links { flex-wrap: wrap; justify-content: center; }
 }
 
 /* ============================================
@@ -1065,11 +1028,4 @@ html, body {
     padding-right: 20px;
   }
 
-  .footer-main,
-  .footer-social,
-  .footer-bottom,
-  .footer-legal {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 }
