@@ -553,33 +553,85 @@ html, body {
 }
 
 /* ============================================
-   About Section
+   About Section (bdcs.org Bishop Dunne style,
+   apex dark colors)
    ============================================ */
 .about-section {
-  padding: 100px 80px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 110px 80px;
 }
-.about-section h2 {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  margin-bottom: 24px;
-  color: #fff;
+
+.about-header {
+  margin-bottom: 28px;
 }
-.about-section p {
-  font-size: 1.05rem;
-  line-height: 1.8;
+
+.about-eyebrow {
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-title {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--foreground);
+}
+
+.about-body p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.9;
   color: rgba(255, 255, 255, 0.6);
   max-width: 700px;
   margin-bottom: 20px;
 }
-.about-section .tagline {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 1.5rem;
-  color: #3bc94e;
-  margin-top: 32px;
+
+.about-footer {
+  position: relative;
+  margin-top: 36px;
+}
+
+.about-footer::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 394px;
+  height: 1px;
+  background: rgb(205, 205, 205);
+  transform: translateY(-50%);
+}
+
+.about-footer a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 28px;
+  color: var(--primary);
+  background: var(--background);
+  border: 1px solid var(--primary);
+  border-radius: 3px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+.about-footer a:hover {
+  background: hsl(128 57% 51% / 0.15);
 }
 
 /* ============================================
