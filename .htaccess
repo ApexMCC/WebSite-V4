@@ -4,10 +4,14 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Serve the app entry point for clean URLs / SPA routing
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.html [L]
+# Serve files from /public
+RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -d
+RewriteRule ^(.*)$ public/$1 [L]
+
+# SPA / clean URL fallback
+RewriteCond %{DOCUMENT_ROOT}/public/index.html -f
+RewriteRule ^ public/index.html [L]
 
 # Disable directory listing
 Options -Indexes
