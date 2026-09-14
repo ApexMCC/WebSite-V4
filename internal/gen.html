@@ -4,11 +4,11 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G2MD4PXZ6R"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-G2MD4PXZ6R');
+    gtag('config', 'G-G2MD4PXZ6R');
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,8 +102,8 @@
             width: 100%;
             overflow-x: auto;
             padding: 30px;
-            background: #fff;
-            border: 1px solid #eee;
+            background: #000000;
+            border: 1px solid #333;
             border-radius: 10px;
         }
 
@@ -139,7 +139,6 @@
 
 <div class="container">
 
-    <!-- STAFF DETAILS -->
     <div class="card">
 
         <h1>Apex MCC</h1>
@@ -152,24 +151,21 @@
         <input
             id="name"
             placeholder="e.g. Jayesh Poudel"
+            value="Jayesh Poudel"
         >
 
         <label>Job Title</label>
         <input
             id="title"
-            placeholder="e.g. Website & Digital Services Administrator"
-        >
-
-        <label>Phone</label>
-        <input
-            id="phone"
-            placeholder="e.g. +1 (231) 227-8971"
+            placeholder="e.g. Director of Information Technology"
+            value="Director of Information Technology"
         >
 
         <label>Email</label>
         <input
             id="email"
-            placeholder="e.g. jayesh.poudel@apexmcc.org"
+            placeholder="e.g. support@apexmcc.org"
+            value="support@apexmcc.org"
         >
 
         <button onclick="copySignature()">
@@ -182,8 +178,6 @@
 
     </div>
 
-
-    <!-- PREVIEW -->
     <div class="card">
 
         <h2>Preview</h2>
@@ -202,162 +196,70 @@
 
 </div>
 
-
 <script>
 
-const APEX_LOGO =
-"https://us-east-1.tixte.net/uploads/cdn1.apexmcc.org/apx_logo_inverted.png";
-
-const APEX_WEBSITE =
-"https://www.apexmcc.org";
-
+const APEX_LOGO = "https://raw.githubusercontent.com/ApexMCC/WebSite-V4/refs/heads/main/cdn/apex_icon.png";
+const APEX_WEBSITE = "https://www.apexmcc.org";
 
 function escapeHTML(value) {
-
     return value
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;");
-
 }
 
-
 function generateSignature() {
-
-    const name =
-        document.getElementById("name").value || "Your Name";
-
-    const title =
-        document.getElementById("title").value || "Job Title";
-
-    const phone =
-        document.getElementById("phone").value || "Phone Number";
-
-    const email =
-        document.getElementById("email").value || "email@apexmcc.org";
-
+    const name = document.getElementById("name").value || "Your Name";
+    const title = document.getElementById("title").value || "Job Title";
+    const email = document.getElementById("email").value || "support@apexmcc.org";
 
     const signature = `
-<table cellpadding="0" cellspacing="0" border="0"
-style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;">
-
-    <tr>
-
-        <td style="padding-right:15px;vertical-align:top;">
-
-            <img
-                src="${APEX_LOGO}"
-                alt="Apex MCC"
-                width="141"
-                height="129"
-                style="width:141px;height:129px;display:block;border:0;"
-            >
-
-        </td>
-
-
-        <td style="width:2px;background-color:#cccccc;">
-        </td>
-
-
-        <td style="padding-left:15px;vertical-align:top;">
-
-            <strong style="font-size:16px;color:#111111;">
-                ${escapeHTML(name)}
-            </strong><br>
-
-            ${escapeHTML(title)}<br>
-
-            <strong>P:</strong>
-            ${escapeHTML(phone)}
-            <br>
-
-            <strong>E:</strong>
-
-            <a
-                href="mailto:${escapeHTML(email)}"
-                style="color:#0066cc;text-decoration:none;"
-            >
-                ${escapeHTML(email)}
-            </a>
-
-            <br>
-
-            <strong>W:</strong>
-
-            <a
-                href="${APEX_WEBSITE}"
-                target="_blank"
-                rel="noopener noreferrer"
-                style="color:#0066cc;text-decoration:none;"
-            >
-                www.apexmcc.org
-            </a>
-
-        </td>
-
-    </tr>
-
+<table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 13px; color: #f3f4f6; background-color: #000000; padding: 12px; line-height: 1.5;">
+  <tr>
+    <td style="padding-right: 14px; vertical-align: middle;">
+      <img src="${APEX_LOGO}" alt="Apex MCC Logo" width="32" style="display: block; border-radius: 4px;">
+    </td>
+    <td style="border-left: 2px solid #22c55e; padding-left: 14px; vertical-align: middle;">
+      <div style="font-weight: 600; font-size: 14px; color: #ffffff; margin-bottom: 1px;">${escapeHTML(name)}</div>
+      <div style="color: #9ca3af; font-size: 12px; margin-bottom: 4px;">${escapeHTML(title)} &nbsp;&middot;&nbsp; Apex MCC</div>
+      <div style="font-size: 12px; margin-bottom: 4px;">
+        <a href="mailto:${escapeHTML(email)}" style="color: #f3f4f6; text-decoration: underline; text-decoration-color: #22c55e;">${escapeHTML(email)}</a>
+        <span style="color: #4b5563;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+        <a href="${APEX_WEBSITE}" target="_blank" style="color: #f3f4f6; text-decoration: underline; text-decoration-color: #22c55e;">apexmcc.org</a>
+      </div>
+      <div style="color: #9ca3af; font-size: 11px; letter-spacing: 0.2px;">People. Community. Opportunity.</div>
+    </td>
+  </tr>
 </table>
 `.trim();
 
-
-    document.getElementById("signature").innerHTML =
-        signature;
-
-    document.getElementById("output").value =
-        signature;
-
+    document.getElementById("signature").innerHTML = signature;
+    document.getElementById("output").value = signature;
 }
 
-
 async function copySignature() {
-
-    const html =
-        document.getElementById("output").value;
+    const html = document.getElementById("output").value;
 
     try {
-
         await navigator.clipboard.writeText(html);
-
     } catch (error) {
-
-        const textarea =
-            document.getElementById("output");
-
+        const textarea = document.getElementById("output");
         textarea.select();
-
         document.execCommand("copy");
-
     }
 
-
-    const success =
-        document.getElementById("success");
-
+    const success = document.getElementById("success");
     success.style.display = "block";
 
     setTimeout(() => {
-
         success.style.display = "none";
-
     }, 2500);
-
 }
 
-
-document
-    .querySelectorAll("input")
-    .forEach(input => {
-
-        input.addEventListener(
-            "input",
-            generateSignature
-        );
-
-    });
-
+document.querySelectorAll("input").forEach(input => {
+    input.addEventListener("input", generateSignature);
+});
 
 generateSignature();
 
