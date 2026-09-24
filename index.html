@@ -37,6 +37,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 
@@ -53,11 +54,11 @@
       </label>
       <div class="nav-links">
         <a href="/">HOME</a>
-        <a href="/community">OUR COMMUNITY</a>
-        <a href="/funding">FUNDRAISING</a>
-        <a href="/roadmap">ROADMAP</a>
-        <a href="/hiring">JOIN THE TEAM</a>
-        <a href="/donate" class="donate-button">
+        <a href="/community/">OUR COMMUNITY</a>
+        <a href="/funding/">FUNDRAISING</a>
+        <a href="/roadmap/">ROADMAP</a>
+        <a href="/hiring/">JOIN THE TEAM</a>
+        <a href="/internal/donate.html" class="donate-button">
           DONATE <span aria-hidden="true">→</span>
         </a>
       </div>
@@ -103,7 +104,7 @@
                 <a href="/internal/donate.html" class="slide-btn primary">
                   DONATE NOW <span aria-hidden="true">→</span>
                 </a>
-                <a href="/hiring" class="slide-btn outline">
+                <a href="/hiring/" class="slide-btn outline">
                   JOIN THE TEAM
                 </a>
               </div>
@@ -340,10 +341,10 @@
           <div class="footer-col">
             <h4 class="footer-col-title">Contact</h4>
             <ul>
-              <li><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a></li>
-              <li><a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a></li>
+              <li><a href="/coming-soon.html" class="social-coming-soon">Instagram — Coming Soon</a></li>
+              <li><a href="/coming-soon.html" class="social-coming-soon">Facebook — Coming Soon</a></li>
               <li><a href="https://x.com/ApexMCC" target="_blank" rel="noreferrer">X (Twitter)</a></li>
-              <li><a href="https://www.tiktok.com/" target="_blank" rel="noreferrer">TikTok</a></li>
+              <li><a href="/coming-soon.html" class="social-coming-soon">TikTok — Coming Soon</a></li>
               <li><a href="https://www.linkedin.com/company/apexmcc/" target="_blank" rel="noreferrer">LinkedIn</a></li>
             </ul>
           </div>
@@ -447,5 +448,15 @@
     });
   </script>
 
+  <script>
+    const revealItems = document.querySelectorAll(".about-section, .marquee-section, .site-footer");
+    revealItems.forEach((item) => item.classList.add("reveal"));
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add("is-visible"); obs.unobserve(entry.target); } });
+      }, { threshold: 0.12 });
+      revealItems.forEach((item) => observer.observe(item));
+    } else { revealItems.forEach((item) => item.classList.add("is-visible")); }
+  </script>
 </body>
 </html>
