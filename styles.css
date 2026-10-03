@@ -154,7 +154,8 @@ html, body {
 }
 
 .nav-dropdown:hover .dd-arrow,
-.nav-dropdown.open .dd-arrow {
+.nav-dropdown.open .dd-arrow,
+.nav-dropdown:focus-within .dd-arrow {
   transform: rotate(180deg);
 }
 
@@ -613,14 +614,16 @@ html, body {
     max-height: 0;
     overflow: hidden;
     opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transition: max-height 0.3s ease, padding 0.3s ease;
+    visibility: hidden;
+    pointer-events: none;
+    transition: max-height 0.3s ease, padding 0.3s ease, visibility 0.3s ease;
   }
 
   .nav-dropdown.open .nav-dropdown-menu {
     max-height: 400px;
     padding: 0 0 12px 16px;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .nav-dropdown-menu a {
